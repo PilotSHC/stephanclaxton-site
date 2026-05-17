@@ -8,14 +8,14 @@ export default function HomePage() {
           <div className="label">Sunnyvale, CA · MMXXVI</div>
           <h1>Stephan Claxton</h1>
           <p className="lede">
-            I design and architect engineered systems — where simulation,
-            software, and hardware have to behave as one coherent thing.
+            Most high-consequence software is built without a system. I work on
+            the engineering discipline that fixes that — across autonomy, space,
+            and defense.
           </p>
           <p className="lede">
-            Today that work is in autonomy at Applied Intuition. Before that,
-            model-based systems engineering for space and defense programs at
-            Lockheed Martin and Strategic Technology Consulting, an Arcfield
-            company.
+            Today at Applied Intuition. Before that, model-based systems
+            engineering for space and defense programs at Lockheed Martin and
+            Strategic Technology Consulting, an Arcfield company.
           </p>
         </div>
 
@@ -23,16 +23,41 @@ export default function HomePage() {
           <dl>
             <dt>Practice</dt>
             <dd>Systems architecture &amp; design</dd>
-            <dd>MBSE · SysML</dd>
+            <dd>MBSE · SysML v2</dd>
 
             <dt>Domains</dt>
             <dd>Autonomy · Space · Defense</dd>
 
-            <dt>Education</dt>
-            <dd>MBA, Embry-Riddle</dd>
-            <dd>BE, Western Michigan</dd>
+            <dt>Now</dt>
+            <dd>
+              Writing on executable models, MBSE in CI, &amp; systems
+              engineering at startup cadence
+            </dd>
           </dl>
         </aside>
+      </section>
+
+      <section className="section">
+        <h2>Field notes</h2>
+        <ul className="field-notes">
+          <li>
+            Architecture is the <em>actual</em> design of the system — not a
+            diagram produced after the code is written.
+          </li>
+          <li>
+            Requirements traceability is institutional memory. It feels useful
+            exactly once, on the worst day. That is enough.
+          </li>
+          <li>
+            Executable models close the verification gap descriptive models
+            never could. Within five years, descriptive-only systems modeling
+            will look the way hand-maintained interface documents look today.
+          </li>
+          <li>
+            The aerospace tradition gave systems engineering its methods. The
+            software-cadence tradition is giving it back its relevance.
+          </li>
+        </ul>
       </section>
 
       <section className="section">
@@ -60,19 +85,28 @@ export default function HomePage() {
           <div className="role">Systems Engineer</div>
           <div className="where">
             Applied Intuition
-            <span>Sunnyvale, CA</span>
+            <span>
+              Systems architecture &amp; verification for autonomous vehicle
+              development
+            </span>
           </div>
 
           <div className="role">Sr. Principal Systems Engineer · TPM</div>
           <div className="where">
             Strategic Technology Consulting (Arcfield)
-            <span>Management consulting · Defense</span>
+            <span>
+              Senior systems engineering and technical program management on
+              defense programs
+            </span>
           </div>
 
           <div className="role">Sr. Systems Engineer</div>
           <div className="where">
             Lockheed Martin
-            <span>Model-based systems engineering · Space &amp; defense</span>
+            <span>
+              Model-based systems engineering for space &amp; defense programs
+              — SysML modeling, requirements architecture, MBSE practice
+            </span>
           </div>
         </div>
       </section>

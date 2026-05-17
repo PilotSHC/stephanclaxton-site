@@ -249,6 +249,29 @@ a:hover { text-decoration-color: var(--accent); color: var(--accent); }
   line-height: 1.5;
 }
 
+.field-notes {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 44rem;
+}
+@media (min-width: 800px) {
+  .field-notes { grid-template-columns: 1fr 1fr; gap: 1.75rem 3rem; }
+}
+.field-notes li {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--ink);
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--rule);
+}
+.field-notes li em {
+  font-style: italic;
+  color: var(--accent);
+}
+
 .experience-grid {
   display: grid;
   grid-template-columns: 1fr;
