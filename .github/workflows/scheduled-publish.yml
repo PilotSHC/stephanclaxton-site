@@ -1,0 +1,76 @@
+name: Scheduled publish
+
+on:
+  schedule:
+    # Once a day at 16:05 UTC = 9:05 AM Pacific (PDT) / 8:05 AM Pacific (PST)
+    # The :05 offset avoids top-of-hour congestion on GitHub's scheduler,
+    # which can delay top-of-hour runs by 5-15 minutes during heavy load.
+    - cron: '5 16 * * *'
+  workflow_dispatch:
+    inputs:
+      force_slug:
+        description: 'Force-publish a specific slug now (ignores publishAt)'
+        required: false
+        type: string
+
+permissions:
+  contents: write  # needs write to commit back published.json + generated site pages
+
+concurrency:
+  group: scheduled-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install script deps
+        working-directory: scripts
+        run: npm install --no-audit --no-fund
+
+      - name: Run scheduler
+        id: run
+        env:
+          SITE_URL: https://stephanclaxton.com
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
+          HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}
+          MEDIUM_TOKEN: ${{ secrets.MEDIUM_TOKEN }}
+          MEDIUM_USER_ID: ${{ secrets.MEDIUM_USER_ID }}
+          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+          FORCE_SLUG: ${{ inputs.force_slug }}
+        run: node scripts/run-scheduled-publish.js
+
+      - name: Commit state changes
+        if: steps.run.outputs.any_published == 'true'
+        run: |
+          git config user.name "stephanclaxton-bot"
+          git config user.email "bot@stephanclaxton.com"
+          git add content/published.json app/writing/
+          if git diff --staged --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git commit -m "chore(publish): release ${{ steps.run.outputs.slugs }}"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Scheduled publish run" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Any published: \`${{ steps.run.outputs.any_published }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Slugs: \`${{ steps.run.outputs.slugs }}\`" >> $GITHUB_STEP_SUMMARY

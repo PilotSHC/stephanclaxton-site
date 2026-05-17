@@ -1,0 +1,12 @@
+{
+  "name": "stephanclaxton-publish-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cross-publish articles from /content/articles to external platforms.",
+  "scripts": {
+    "publish:medium": "node publish-medium.js",
+    "publish:devto": "node publish-devto.js",
+    "publish:hashnode": "node publish-hashnode.js",
+    "publish:linkedin": "node publish-linkedin.js"
+  }
+}
