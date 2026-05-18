@@ -100,7 +100,7 @@ function generateSitePage(article) {
     author: {
       '@type': 'Person',
       name: 'Stephan Claxton',
-      url: 'https://stephanclaxton.com',
+      url: 'https://www.stephanclaxton.com',
     },
     datePublished: article.publishAt || article.date || new Date().toISOString(),
     publisher: { '@type': 'Person', name: 'Stephan Claxton' },

@@ -101,7 +101,7 @@ No build configuration needed.
 
 ## SEO checklist after first deploy
 
-- [ ] Submit `https://stephanclaxton.com/sitemap.xml` to [Google Search Console](https://search.google.com/search-console)
+- [ ] Submit `https://www.stephanclaxton.com/sitemap.xml` to [Google Search Console](https://search.google.com/search-console)
 - [ ] Submit the same sitemap to [Bing Webmaster Tools](https://www.bing.com/webmasters)
 - [ ] Verify Schema.org markup with the [Rich Results Test](https://search.google.com/test/rich-results)
 - [ ] Add your GitHub, Medium, and X handles to the `sameAs` array in `app/layout.tsx`

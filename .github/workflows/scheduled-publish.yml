@@ -43,7 +43,7 @@ jobs:
       - name: Run scheduler
         id: run
         env:
-          SITE_URL: https://stephanclaxton.com
+          SITE_URL: https://www.stephanclaxton.com
           DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
           HASHNODE_TOKEN: ${{ secrets.HASHNODE_TOKEN }}
           HASHNODE_PUBLICATION_ID: ${{ secrets.HASHNODE_PUBLICATION_ID }}

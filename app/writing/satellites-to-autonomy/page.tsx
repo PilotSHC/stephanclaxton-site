@@ -24,7 +24,7 @@ const articleSchema = {
   author: {
     "@type": "Person",
     name: "Stephan Claxton",
-    url: "https://stephanclaxton.com",
+    url: "https://www.stephanclaxton.com",
   },
   datePublished: "2026-05-16",
   publisher: {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://stephanclaxton.com"),
+  metadataBase: new URL("https://www.stephanclaxton.com"),
   title: {
     default: "Stephan Claxton: Systems Engineering for AI & Autonomy",
     template: "%s · Stephan Claxton",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Stephan Claxton: Systems Engineering for AI & Autonomy",
     description:
       "Systems engineering for AI and autonomy. Architecture, MBSE, and executable models for the software that has to be right.",
-    url: "https://stephanclaxton.com",
+    url: "https://www.stephanclaxton.com",
     siteName: "Stephan Claxton",
     locale: "en_US",
   },
@@ -81,7 +81,7 @@ const personSchema = {
     "Aerospace Systems",
     "Satellite Systems",
   ],
-  url: "https://stephanclaxton.com",
+  url: "https://www.stephanclaxton.com",
   sameAs: [
     "https://www.linkedin.com/in/stephan-claxton-mbse-mba-91895691/",
     // add others as you claim them:
