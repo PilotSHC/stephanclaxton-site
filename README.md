@@ -105,8 +105,6 @@ No build configuration needed.
 - [ ] Submit the same sitemap to [Bing Webmaster Tools](https://www.bing.com/webmasters)
 - [ ] Verify Schema.org markup with the [Rich Results Test](https://search.google.com/test/rich-results)
 - [ ] Add your GitHub, Medium, and X handles to the `sameAs` array in `app/layout.tsx`
-- [ ] Update the contact email if `hello@stephanclaxton.com` isn't what you want
-
 ## Files of note
 
 ```

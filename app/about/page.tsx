@@ -85,7 +85,7 @@ export default function AboutPage() {
       <h2>Get in touch</h2>
       <p>
         The best way to reach me is{" "}
-        <a href="mailto:hello@stephanclaxton.com">email</a> or{" "}
+        <a href="mailto:stephan.claxton@gmail.com">email</a> or{" "}
         <a
           href="https://www.linkedin.com/in/stephan-claxton-mbse-mba-91895691/"
           target="_blank"

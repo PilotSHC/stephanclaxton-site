@@ -114,7 +114,7 @@ export default function RootLayout({
               <Link href="/">Index</Link>
               <Link href="/writing">Writing</Link>
               <Link href="/about">About</Link>
-              <Link href="mailto:hello@stephanclaxton.com">Contact</Link>
+              <Link href="mailto:stephan.claxton@gmail.com">Contact</Link>
             </nav>
           </header>
 
