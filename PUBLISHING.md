@@ -136,10 +136,24 @@ Add the ones you have, leave the rest empty (the scheduler skips platforms with 
 | `HASHNODE_PUBLICATION_ID` | Hashnode | From the GraphQL endpoint (see below) |
 | `MEDIUM_TOKEN` | Medium | medium.com/me/settings/security → Integration tokens |
 | `MEDIUM_USER_ID` | Medium | GET `https://api.medium.com/v1/me` with the token |
-| `LINKEDIN_TOKEN` | LinkedIn | OAuth flow via developer.linkedin.com (see below) |
-| `LINKEDIN_AUTHOR_URN` | LinkedIn | GET `https://api.linkedin.com/v2/userinfo` → `urn:li:person:<sub>` |
+| ~~`LINKEDIN_TOKEN` / `LINKEDIN_AUTHOR_URN`~~ | LinkedIn (manual) | **Intentionally not automated** — see below |
 
 The scheduler runs successfully even if only one platform is configured. Start with Dev.to (5-minute setup).
+
+### LinkedIn is intentionally manual
+
+The `publish-linkedin.js` script exists and works, but it's not wired up to the cron by default. Reasons:
+
+1. **LinkedIn requires a Developer App tied to a Company Page** — even for personal posting via API. Free to create but adds maintenance surface.
+2. **OAuth tokens expire every 60 days** — requires either manual re-auth every ~50 days or refresh-token rotation (not currently implemented).
+3. **2x/month publishing cadence doesn't justify the API maintenance** — 30 seconds of manual copy-paste per article is cheaper than maintaining LinkedIn API tokens.
+
+**Operational pattern**: when GitHub emails you that the cron published a new article, open LinkedIn, paste the canonical URL (e.g. `https://www.stephanclaxton.com/writing/<slug>`), use the `linkedinHook` field from the article's frontmatter as the post commentary, and share.
+
+If you ever want to flip this on, set `LINKEDIN_TOKEN` and `LINKEDIN_AUTHOR_URN` in GitHub Secrets — the script will start firing automatically. To get the credentials:
+
+- App + OAuth: https://www.linkedin.com/developers/apps → Create app → request "Share on LinkedIn" + "Sign In with LinkedIn using OpenID Connect" products → OAuth scopes: `openid profile email w_member_social` → manual token exchange via cURL
+- Author URN: `curl -H "Authorization: Bearer $TOKEN" https://api.linkedin.com/v2/userinfo` → format as `urn:li:person:<sub>`
 
 ### 4. Enable the workflow
 
