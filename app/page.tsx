@@ -9,29 +9,30 @@ export default function HomePage() {
           <h1>Stephan Claxton</h1>
           <p className="lede">
             Most high-consequence software is built without a system. I work on
-            the engineering discipline that fixes that — across autonomy, space,
+            the engineering discipline that fixes that, across autonomy, space,
             and defense.
           </p>
           <p className="lede">
-            Today at Applied Intuition. Before that, model-based systems
-            engineering for space and defense programs at Lockheed Martin and
-            Strategic Technology Consulting, an Arcfield company.
+            Today: systems engineering for autonomy at Applied Intuition.
+            Before: MBSE for space and defense programs at Lockheed Martin,
+            then technical program management at Strategic Technology
+            Consulting (Arcfield).
           </p>
         </div>
 
         <aside>
           <dl>
             <dt>Practice</dt>
-            <dd>Systems architecture &amp; design</dd>
-            <dd>MBSE · SysML v2</dd>
+            <dd>Architecture for AI &amp; autonomy</dd>
+            <dd>MBSE · executable models · verification</dd>
 
             <dt>Domains</dt>
             <dd>Autonomy · Space · Defense</dd>
 
             <dt>Now</dt>
             <dd>
-              Writing on executable models, MBSE in CI, &amp; systems
-              engineering at startup cadence
+              Writing on the next generation of systems engineering, for AI,
+              autonomy, and the software that has to be right
             </dd>
           </dl>
         </aside>
@@ -41,21 +42,24 @@ export default function HomePage() {
         <h2>Field notes</h2>
         <ul className="field-notes">
           <li>
-            Architecture is the <em>actual</em> design of the system — not a
-            diagram produced after the code is written.
+            Structure produces behavior. The architecture of a system is its
+            actual design. Change the architecture and you change what the
+            system does. Change anything else, and you mostly change the
+            story you tell about it.
+          </li>
+          <li>
+            Building autonomy is the hardest verification problem in
+            engineering today, and the one rewriting how systems engineering
+            is practiced.
           </li>
           <li>
             Requirements traceability is institutional memory. It feels useful
             exactly once, on the worst day. That is enough.
           </li>
           <li>
-            Executable models close the verification gap descriptive models
-            never could. Within five years, descriptive-only systems modeling
-            will look the way hand-maintained interface documents look today.
-          </li>
-          <li>
-            The aerospace tradition gave systems engineering its methods. The
-            software-cadence tradition is giving it back its relevance.
+            The aerospace tradition gave systems engineering its methods. AI
+            and autonomy are giving it back its relevance, and making
+            executable models the new default.
           </li>
         </ul>
       </section>
@@ -71,7 +75,7 @@ export default function HomePage() {
                 autonomous vehicles
               </Link>
               <p className="dek">
-                Two domains that look nothing alike on the surface — and the
+                Two domains that look nothing alike on the surface, and the
                 MBSE discipline that translates between them.
               </p>
             </div>
@@ -104,8 +108,8 @@ export default function HomePage() {
           <div className="where">
             Lockheed Martin
             <span>
-              Model-based systems engineering for space &amp; defense programs
-              — SysML modeling, requirements architecture, MBSE practice
+              Model-based systems engineering for space &amp; defense programs.
+              SysML modeling, requirements architecture, MBSE practice.
             </span>
           </div>
         </div>

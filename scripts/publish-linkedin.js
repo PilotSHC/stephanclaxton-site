@@ -11,7 +11,7 @@ async function main() {
   const { LINKEDIN_TOKEN, LINKEDIN_AUTHOR_URN, ARTICLE_SLUG } = process.env;
 
   if (!LINKEDIN_TOKEN || !LINKEDIN_AUTHOR_URN) {
-    console.log('LinkedIn credentials not configured — skipping.');
+    console.log('LinkedIn credentials not configured. Skipping.');
     return;
   }
 

@@ -1,18 +1,18 @@
 ---
-title: SysML v2 belongs in your CI pipeline, not your document repository
-description: The shift from descriptive models to executable ones is what makes model-based systems engineering finally compatible with software-cadence development.
-slug: sysml-v2-in-ci-pipelines
+title: Your system model belongs in CI, not your document repository
+description: The shift from descriptive models to executable ones is what finally makes system-level engineering compatible with the cadence of modern autonomy and AI development.
+slug: system-models-belong-in-ci
 publishAt: 2026-06-03T09:00:00-07:00
-tags: [sysml, mbse, systems-engineering, devops, ci-cd]
+tags: [systems-engineering, autonomy, ai-systems, executable-models, mbse, ci-cd, sysml]
 linkedinHook: |
-  For thirty years, systems models have lived in document repositories — reviewed quarterly, signed off on paper, then quietly drifted out of sync with what teams actually built.
+  For thirty years, systems models have lived in document repositories. Reviewed quarterly, signed off on paper, then quietly drifted out of sync with what teams actually built.
 
-  SysML v2 changes the economics of that arrangement. The models can finally live where the rest of the engineering work lives: in version control, reviewed in pull requests, validated in CI.
+  In autonomy and AI development, that arrangement is no longer survivable. The model has to live where the code lives: in version control, reviewed in pull requests, validated in CI.
 
-  Why that matters more than the language changes themselves →
+  Why this matters more than the language choice.
 ---
 
-For thirty years, systems models have lived in document repositories. Engineers built them in heavyweight desktop tools, exported them as PDFs for review, and watched them quietly drift out of sync with what the teams actually shipped. The discipline of model-based systems engineering survived this not because the models were useful in real time, but because the alternative — no system-level reasoning at all — was worse.
+For thirty years, systems models have lived in document repositories. Engineers built them in heavyweight desktop tools, exported them as PDFs for review, and watched them quietly drift out of sync with what the teams actually shipped. The discipline of model-based systems engineering survived this not because the models were useful in real time, but because the alternative (no system-level reasoning at all) was worse.
 
 SysML v2 changes the economics of that arrangement. Not because the language is better designed than its predecessor, though it is. The real shift is structural: the models can finally live where the rest of the engineering work lives.
 

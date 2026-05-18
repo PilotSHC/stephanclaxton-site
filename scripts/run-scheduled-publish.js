@@ -38,7 +38,7 @@ function platformsRemaining(slug) {
 function isPlatformEnabled(p) {
   switch (p) {
     case 'site':
-      return true; // always — the site page is generated locally then committed
+      return true; // always: the site page is generated locally then committed
     case 'devto':
       return Boolean(process.env.DEVTO_API_KEY);
     case 'hashnode':
@@ -133,7 +133,7 @@ export default function Article() {
         <div className="meta">Essay</div>
         <h1>${escapeHtml(article.title)}</h1>
         <div className="byline">
-          Stephan Claxton — Systems Engineer, Applied Intuition
+          Stephan Claxton, Systems Engineer at Applied Intuition
         </div>
 
         ${html}

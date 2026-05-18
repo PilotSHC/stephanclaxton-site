@@ -47,7 +47,7 @@ export default function Article() {
           autonomous vehicles
         </h1>
         <div className="byline">
-          Stephan Claxton — Systems Engineer, Applied Intuition
+          Stephan Claxton, Systems Engineer at Applied Intuition
         </div>
 
         <p>
@@ -58,9 +58,9 @@ export default function Article() {
         <p>
           That&rsquo;s the defining constraint of satellite engineering, and it
           shapes everything. When a spacecraft separates from the launch
-          vehicle, every architectural decision you made — every requirement
+          vehicle, every architectural decision you made (every requirement
           you traced, every failure mode you analyzed, every interface you
-          documented — is now permanent. You don&rsquo;t get to push a hotfix
+          documented) is now permanent. You don&rsquo;t get to push a hotfix
           to a satellite in geosynchronous orbit. You get telemetry, and you
           get whatever resilience you designed in years earlier.
         </p>
@@ -69,8 +69,8 @@ export default function Article() {
           Moving from that world into autonomous vehicle development at Applied
           Intuition has been clarifying in unexpected ways. The two domains
           look nothing alike on the surface. But the systems engineering
-          discipline underneath — and specifically the model-based systems
-          engineering discipline — translates more directly than I expected.
+          discipline underneath, and specifically the model-based systems
+          engineering discipline, translates more directly than I expected.
         </p>
 
         <h2>Satellites taught me to take models seriously</h2>
@@ -80,7 +80,7 @@ export default function Article() {
           fashionable but because the alternative is unworkable. You cannot
           integrate a satellite the way you integrate a web app. By the time
           hardware exists, the architecture has to be right. SysML models,
-          requirements databases, interface control documents — these
+          requirements databases, interface control documents: these
           aren&rsquo;t compliance artifacts on a space program. They&rsquo;re
           the actual design.
         </p>
@@ -96,7 +96,7 @@ export default function Article() {
 
         <p>
           Here&rsquo;s where the comparison gets interesting. A satellite
-          operates in an environment that is mostly predictable — orbital
+          operates in an environment that is mostly predictable: orbital
           mechanics, thermal cycles, radiation, known mission phases. The
           operational design domain is bounded.
         </p>
@@ -113,7 +113,7 @@ export default function Article() {
         <p>
           That&rsquo;s why MBSE matters <em>more</em> in autonomy, not less.
           When you can&rsquo;t test your way to confidence, you have to
-          architect your way there — and you need executable models that can
+          architect your way there. You need executable models that can
           drive simulation across scenario spaces no test fleet can physically
           cover.
         </p>
@@ -130,8 +130,8 @@ export default function Article() {
         </p>
 
         <p>
-          The instinct from space — &ldquo;lock the architecture, then
-          build&rdquo; — doesn&rsquo;t survive contact with autonomy. But the{" "}
+          The instinct from space (&ldquo;lock the architecture, then
+          build&rdquo;) doesn&rsquo;t survive contact with autonomy. But the{" "}
           <em>underlying habit</em> of taking architecture seriously, of
           treating system-level reasoning as a real discipline rather than
           something engineers do in their heads, absolutely does. The teams
@@ -145,7 +145,7 @@ export default function Article() {
         <p>
           SysML v2 is going to matter more than the broader engineering
           community currently realizes. The textual syntax, the cleaner
-          semantics, the genuinely improved tooling — all of it points toward a
+          semantics, the genuinely improved tooling: all of it points toward a
           future where systems models live in version control alongside code,
           get reviewed in pull requests, and participate in CI/CD pipelines.
           That&rsquo;s a world satellite programs have been gesturing toward
@@ -155,7 +155,7 @@ export default function Article() {
         <p>
           If you&rsquo;re a systems engineer thinking about where to spend your
           next decade, I&rsquo;d point at the intersection of MBSE methodology
-          and high-consequence software systems — whether that&rsquo;s
+          and high-consequence software systems, whether that&rsquo;s
           spacecraft, autonomy, defense, or medical devices. The problems are
           getting harder. The tooling is finally catching up.
         </p>

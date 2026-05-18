@@ -1,0 +1,86 @@
+---
+description: Editorial spine for Stephan Claxton's writing. Systems thinking as the lens, Meadows lineage as the intellectual anchor, and an organic American-English voice that does not read as AI-generated.
+alwaysApply: true
+---
+
+# Writing principles for this site
+
+Every article, homepage edit, and About-page revision should read as a piece of applied systems thinking, written in a recognizably human voice. The intended audience includes senior engineers and academic readers (MIT SDM, Stanford MS&E) who notice both the substance and the prose.
+
+## Voice and punctuation (mandatory)
+
+This site is written by a human being. Anything that reads as AI-generated gets rewritten.
+
+The single largest tell is the em-dash. **Do not use em-dashes (`—`) anywhere on this site.** Not in essays, not in site copy, not in metadata, not in code comments that appear in user-visible places. Use proper American English punctuation instead: commas, periods, colons, semicolons, parentheses, or a sentence break.
+
+Common em-dash patterns and their American-English replacements:
+
+- Parenthetical aside: `The methods — review formats, gate criteria — are the visible part.` becomes `The methods (review formats, gate criteria) are the visible part.` or `The methods, like review formats and gate criteria, are the visible part.`
+- Amplifying clause at end of sentence: `This is not a moral story. It is a structural property of the system — and one that rewards the right interventions.` becomes `This is not a moral story. It is a structural property of the system, and one that rewards the right interventions.`
+- Sharp break or pivot: `She is not wrong because the interventions are useless — they are not useless.` becomes `She is not wrong because the interventions are useless. They are not useless.`
+- Appositive: `Donella Meadows — the systems thinker — wrote...` becomes `Donella Meadows, the systems thinker, wrote...`
+
+When in doubt, prefer a period and a new sentence over any other punctuation. Short sentences read more human than long ones.
+
+Other AI-tells to avoid:
+
+- The "it's not just X, it's Y" / "this isn't merely X, it's Y" construction
+- Heavy connective tissue like *moreover*, *furthermore*, *additionally*, *that said*
+- Tricolons on every paragraph (three-item lists used for rhythm)
+- Vocabulary like *delve*, *tapestry*, *navigate (as a verb meaning explore)*, *leverage (as a verb meaning use)*, *robust*, *vibrant*, *crucial*, *seamless*
+- Hedging stacks (*in many ways*, *to some extent*, *arguably*, *generally speaking*)
+- Metronomic sentence length. Vary it. Real writing has short sentences mixed with longer ones, not a uniform 18-word average.
+- Bullet lists where prose would work. Bullets are a code-review style, not an essay style. Use them sparingly.
+
+American English specifics: *organization* not *organisation*, *behavior* not *behaviour*, *defense* not *defence*, *recognize* not *recognise*, *modeling* not *modelling* in technical contexts. Serial (Oxford) comma is fine and preferred. Single quotes for nested quotes inside double quotes.
+
+## The lens
+
+Demonstrate systems thinking. Do not narrate it.
+
+The core move: **structure produces behavior**. When an essay argues that a structural change (where the model lives, who owns an artifact, how the cadence is set, what is in version control versus document repositories) drives a behavioral change in the team or system, the systems-thinking lens is doing real work and should be visible.
+
+When the essay is about technique, tooling, or career, the lens stays implicit. Surface vocabulary only if it clarifies.
+
+## Vocabulary discipline
+
+Words like *leverage point*, *feedback loop*, *stock and flow*, *operational design domain*, *structure produces behavior*, *paradigm*, *system boundary* should be used **only when they replace a vaguer phrase with a more precise one**.
+
+- Good: "Where the model lives changes what the team does with it. That is a structural intervention, not a process one, which is why it works where exhortations to keep the model updated do not."
+- Bad: "This is a leverage point in the system." (Decoration. Remove "leverage point" and the sentence improves.)
+
+## Citation discipline
+
+Donella Meadows is the explicit anchor. Cite her by name **only** in two places:
+
+1. The About page, in the "How I think about this work" section.
+2. One dedicated flagship essay where engaging her work is the subject of the piece (currently `reading-meadows-from-autonomy.md`).
+
+Everywhere else the lens does the work without name-drops.
+
+- Good: About-page paragraph that names Meadows and the actually-engaged lineage.
+- Good: A standalone essay that takes Meadows's framework seriously and applies it to autonomy.
+- Bad: "As Donella Meadows said..." inside any other essay. The lens is shown by how the argument is structured, not by quoted authority.
+
+Adjacent figure whose work is directly load-bearing for this site: **Nancy Leveson** (MIT AeroAstro, STAMP/STPA). Cite when writing about AV safety, because her work is the closest existing academic body of work to the kind of systems-safety problem autonomy engineering actually faces.
+
+Other systems-thinking figures (John Sterman, W. Edwards Deming, Russell Ackoff, Eli Goldratt, Jay Forrester) may be referenced if and only if their ideas are doing specific intellectual work in the argument. Not as lineage decoration.
+
+## What every article should be doing
+
+1. **Identify the structure.** What system is producing the behavior being discussed?
+2. **Name the intervention.** Is it a low-leverage tweak (parameter, target, incentive) or a high-leverage one (rules, information flows, paradigms)?
+3. **Show, do not tell.** The reader should recognize the lineage. You should not announce it.
+4. **Stay on-domain.** AI, autonomy, MBSE, and high-consequence software are the home turf. Systems-thinking vocabulary borrowed from ecology, economics, or organizational theory should map back to that home turf.
+
+## What no article should be doing
+
+- Repeating "systems thinking" as a slogan
+- Quoting Meadows in the body
+- Using terms like *leverage point* or *feedback loop* without an actual leverage point or feedback loop in the argument
+- Treating MBSE/SysML as the identity. The identity is **systems thinking applied to AI and autonomy**. MBSE and SysML are tactical instantiations.
+- Using em-dashes. Ever.
+
+## Bar for "is this finished?"
+
+An essay is ready to publish when two things are true: a reader who has read *Thinking in Systems* would recognize the lens being applied without the essay having to tell them which book to read, and a reader who has never heard of AI-generated text would not pause on a single sentence and wonder who or what wrote it.

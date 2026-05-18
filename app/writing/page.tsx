@@ -4,14 +4,16 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Writing",
   description:
-    "Essays and notes by Stephan Claxton on model-based systems engineering, SysML, and autonomous vehicle development.",
+    "Essays and notes by Stephan Claxton. Systems thinking applied to engineering in the age of AI and autonomy. Architecture, executable models, verification, and the discipline of building software that has to be right.",
 };
 
 export default function WritingIndex() {
   return (
     <article className="article" style={{ maxWidth: "48rem" }}>
       <div className="meta">Writing</div>
-      <h1>Notes on systems, models, and the work in between</h1>
+      <h1>
+        Systems thinking, applied to engineering in the age of AI and autonomy
+      </h1>
       <div className="byline">By Stephan Claxton</div>
 
       <ul className="writing-list" style={{ marginTop: "2rem" }}>
@@ -23,7 +25,7 @@ export default function WritingIndex() {
               autonomous vehicles
             </Link>
             <p className="dek">
-              Two domains that look nothing alike on the surface — and the MBSE
+              Two domains that look nothing alike on the surface, and the MBSE
               discipline that translates between them.
             </p>
           </div>

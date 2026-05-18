@@ -10,7 +10,7 @@ async function main() {
   const { MEDIUM_TOKEN, MEDIUM_USER_ID, ARTICLE_SLUG } = process.env;
 
   if (!MEDIUM_TOKEN || !MEDIUM_USER_ID) {
-    console.log('Medium credentials not configured — skipping.');
+    console.log('Medium credentials not configured. Skipping.');
     return;
   }
 

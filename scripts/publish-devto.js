@@ -10,7 +10,7 @@ async function main() {
   const { DEVTO_API_KEY, ARTICLE_SLUG } = process.env;
 
   if (!DEVTO_API_KEY) {
-    console.log('Dev.to API key not configured — skipping.');
+    console.log('Dev.to API key not configured. Skipping.');
     return;
   }
 

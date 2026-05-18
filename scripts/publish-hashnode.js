@@ -10,7 +10,7 @@ async function main() {
   const { HASHNODE_TOKEN, HASHNODE_PUBLICATION_ID, ARTICLE_SLUG } = process.env;
 
   if (!HASHNODE_TOKEN || !HASHNODE_PUBLICATION_ID) {
-    console.log('Hashnode credentials not configured — skipping.');
+    console.log('Hashnode credentials not configured. Skipping.');
     return;
   }
 

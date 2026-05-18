@@ -5,42 +5,43 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://stephanclaxton.com"),
   title: {
-    default: "Stephan Claxton — Engineering Systems Design & Architecture",
-    template: "%s — Stephan Claxton",
+    default: "Stephan Claxton: Systems Engineering for AI & Autonomy",
+    template: "%s · Stephan Claxton",
   },
   description:
-    "Stephan Claxton — engineering systems design and architecture. Model-based systems engineering, SysML, and complex system integration across autonomy, space, and defense.",
+    "Stephan Claxton. Systems engineering for AI and autonomy. Architecture, MBSE, and executable models for the software that has to be right. Today at Applied Intuition; previously Lockheed Martin and Arcfield.",
   keywords: [
     "Stephan Claxton",
-    "Systems Architect",
-    "Systems Architecture",
-    "Systems Design",
     "Systems Engineering",
+    "Systems Architecture",
+    "Autonomous Vehicles",
+    "Autonomy",
+    "AI Systems",
+    "Safety-Critical AI",
+    "Verification",
     "Model-Based Systems Engineering",
     "MBSE",
-    "SysML",
-    "Autonomous Vehicles",
-    "Aerospace Systems",
+    "Executable Models",
     "Applied Intuition",
+    "Aerospace Systems",
     "Lockheed Martin",
-    "Embry-Riddle",
   ],
   authors: [{ name: "Stephan Claxton" }],
   creator: "Stephan Claxton",
   openGraph: {
     type: "website",
-    title: "Stephan Claxton — Engineering Systems Design & Architecture",
+    title: "Stephan Claxton: Systems Engineering for AI & Autonomy",
     description:
-      "Engineering systems design and architecture across autonomy, space, and defense. MBSE, SysML, and complex system integration.",
+      "Systems engineering for AI and autonomy. Architecture, MBSE, and executable models for the software that has to be right.",
     url: "https://stephanclaxton.com",
     siteName: "Stephan Claxton",
     locale: "en_US",
   },
   twitter: {
     card: "summary",
-    title: "Stephan Claxton — Engineering Systems Design & Architecture",
+    title: "Stephan Claxton: Systems Engineering for AI & Autonomy",
     description:
-      "Systems architecture and design. MBSE, SysML, autonomy, space, defense.",
+      "Architecture, MBSE, and executable models for AI and autonomy at Applied Intuition.",
   },
   robots: { index: true, follow: true },
 };
@@ -50,9 +51,9 @@ const personSchema = {
   "@type": "Person",
   name: "Stephan Claxton",
   alternateName: "Stephan Claxton",
-  jobTitle: "Systems Architect",
+  jobTitle: "Systems Engineer",
   description:
-    "Engineering systems design and architecture across autonomy, space, and defense. Model-based systems engineering and SysML.",
+    "Systems engineering for AI and autonomy. Architecture, MBSE, and executable models for high-consequence software across autonomy, space, and defense.",
   worksFor: {
     "@type": "Organization",
     name: "Applied Intuition",
@@ -69,11 +70,14 @@ const personSchema = {
     },
   ],
   knowsAbout: [
+    "Systems Engineering",
     "Systems Architecture",
-    "Systems Design",
-    "Model-Based Systems Engineering",
-    "SysML",
     "Autonomous Vehicles",
+    "AI Systems",
+    "Safety-Critical AI",
+    "Model-Based Systems Engineering",
+    "Executable Models",
+    "Verification",
     "Aerospace Systems",
     "Satellite Systems",
   ],
@@ -104,7 +108,7 @@ export default function RootLayout({
         <div className="shell">
           <header className="site-header">
             <Link href="/" className="mark">
-              Stephan Claxton <em>— Systems Architecture</em>
+              Stephan Claxton
             </Link>
             <nav className="site-nav" aria-label="Primary">
               <Link href="/">Index</Link>

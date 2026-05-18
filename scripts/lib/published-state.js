@@ -1,6 +1,6 @@
 // scripts/lib/published-state.js
 // Tracks which articles have been published to which platforms.
-// Stored in content/published.json — committed back to repo by the workflow.
+// Stored in content/published.json. Committed back to repo by the workflow.
 
 const fs = require('fs');
 const path = require('path');

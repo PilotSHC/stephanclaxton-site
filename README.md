@@ -1,6 +1,6 @@
 # stephanclaxton.com
 
-Personal site for Stephan Claxton — engineering systems design and architecture across autonomy, space, and defense.
+Personal site for Stephan Claxton. Systems engineering for AI and autonomy, with prior work in space and defense.
 
 Built with Next.js 14 (App Router). Articles are authored as Markdown in `content/articles/`, with a scheduler that releases them on a daily cron and cross-publishes to Medium, Dev.to, Hashnode, and LinkedIn.
 
@@ -22,16 +22,16 @@ Prerequisites: Node 18+ (you currently have v25.x), npm 9+.
 # 1. Install site dependencies
 npm install
 
-# 2. (Optional) install publisher script dependencies — only needed if you want
-#    to test the cross-posting scripts locally
+# 2. (Optional) install publisher script dependencies. Only needed if you want
+#    to test the cross-posting scripts locally.
 cd scripts && npm install && cd ..
 
 # 3. Start the Next.js dev server
 npm run dev
-# → http://localhost:3000  (falls through to :3001 if 3000 is busy)
+# Serves http://localhost:3000 (falls through to :3001 if 3000 is busy)
 ```
 
-The dev server has hot-reload — edit any file under `app/`, `content/`, or
+The dev server has hot-reload. Edit any file under `app/`, `content/`, or
 `scripts/` and the page refreshes automatically. No database, no external
 services required to develop or preview locally.
 
@@ -65,7 +65,7 @@ rm -rf .next    # nuke the build cache if you ever see stale content
    ```
 
 2. Commit and push. The `scheduled-publish.yml` workflow runs daily at
-   16:05 UTC — when `publishAt` has passed, it will:
+   16:05 UTC. When `publishAt` has passed, it will:
    - Mark the article published in `content/published.json`
    - Generate the writing page under `app/writing/<slug>/`
    - Cross-post to Medium, Dev.to, Hashnode, and LinkedIn
@@ -136,7 +136,7 @@ scripts/
 
 ## Why this stack
 
-- Next.js gives server-rendered HTML out of the box — Google indexes it faster and more reliably than client-rendered SPAs
+- Next.js gives server-rendered HTML out of the box, so Google indexes it faster and more reliably than client-rendered SPAs
 - The App Router's metadata API makes per-page SEO trivial
 - Vercel's free tier covers a personal site indefinitely
 - Markdown sources + a scheduler means you write once, commit, and the same canonical content propagates to every external platform with a `canonical_url` pointed back here

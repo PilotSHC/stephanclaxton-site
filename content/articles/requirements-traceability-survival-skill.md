@@ -9,7 +9,7 @@ linkedinHook: |
 
   That contempt is partially earned. It is also expensive, in ways that only become visible when something goes wrong.
 
-  Here is the version of traceability that is actually worth doing →
+  Here is the version of traceability that is actually worth doing.
 ---
 
 Most engineers who have worked in regulated industries have a quiet contempt for requirements traceability. It is the discipline that auditors care about and engineers tolerate, the spreadsheet that gets updated the week before a milestone review and ignored the rest of the time. The phrase "compliance artifact" is, in many engineering cultures, an insult.
@@ -22,7 +22,7 @@ But there is a version of traceability that is genuinely worth doing, and the di
 
 A useful definition: requirements traceability is the engineering team's ability to answer the question "what did we mean for this to do?" at the granularity of a single system behavior.
 
-When a satellite enters safe mode unexpectedly, when an autonomous vehicle behaves strangely at a four-way stop, when a medical device gives a borderline reading, the engineers responding need to know: what was this system supposed to do in this situation, and what reasoning led us to that intent? If they have to reconstruct that reasoning from memory, from Slack archives, from old design review slides — the response takes weeks. If the trace exists, it takes hours.
+When a satellite enters safe mode unexpectedly, when an autonomous vehicle behaves strangely at a four-way stop, when a medical device gives a borderline reading, the engineers responding need to know: what was this system supposed to do in this situation, and what reasoning led us to that intent? If they have to reconstruct that reasoning from memory, from Slack archives, from old design review slides, the response takes weeks. If the trace exists, it takes hours.
 
 This is not a hypothetical. The teams I have watched handle incidents well are the teams that can produce, within a day, the chain of reasoning that connects a system behavior back to the operational scenario it was designed for. The teams that handle incidents badly are the teams that argue for weeks about what the system was supposed to do, because nobody wrote it down in a form that survived a personnel change.
 
@@ -32,13 +32,13 @@ The version of traceability worth maintaining is not a spreadsheet. It is a set 
 
 Operational scenarios to the requirements they imply. Requirements to the design elements that satisfy them. Design elements to the verification activities that confirm satisfaction. Verification activities to their last run, with results.
 
-The crucial property is that the links are checkable. If a requirement has no verification activity, the build fails. If a design element claims to satisfy a requirement but the requirement has been edited since the last verification run, the link is flagged as stale. If a new operational scenario is added without corresponding requirements, the system flags the gap.
+The key property is that the links are checkable. If a requirement has no verification activity, the build fails. If a design element claims to satisfy a requirement but the requirement has been edited since the last verification run, the link is flagged as stale. If a new operational scenario is added without corresponding requirements, the system flags the gap.
 
 None of this is exotic. It is the same kind of automated consistency checking that software engineering takes for granted. It is just rare enough in systems engineering to feel new.
 
 ## Why aerospace got this partially right
 
-The aerospace and defense industries are not, despite their reputation, particularly good at engineering. What they are good at is institutional memory. The reason DO-178C requires traceability is not that the standard's authors believed paperwork makes software safe. It is that they had decades of evidence that organizations forget — that the people who designed a system retire, leave, get promoted, and the system has to keep running anyway.
+The aerospace and defense industries are not, despite their reputation, particularly good at engineering. What they are good at is institutional memory. The reason DO-178C requires traceability is not that the standard's authors believed paperwork makes software safe. It is that they had decades of evidence that organizations forget. The people who designed a system retire, leave, or get promoted, and the system has to keep running anyway.
 
 Traceability, in the aerospace tradition, is institutional memory enforced by policy. It is sometimes maintained begrudgingly, but it is maintained.
 
@@ -54,9 +54,11 @@ The cost of not maintaining traceability is paid all at once, when something goe
 
 The asymmetry is what makes traceability a survival skill rather than a compliance exercise. The continuous cost is real but tolerable. The discontinuous cost can be existential.
 
+There is a structural way to describe what is happening here. Traceability is a stock of institutional reasoning that gets drawn down by personnel turnover, system change, and the passage of time. Without continuous inflow (engineers writing things down in a form that survives them), the stock drains, and the team's ability to answer the question *what did we mean for this to do* degrades silently. Most days the depletion is invisible because nobody asks. The point at which it becomes visible is the day the answer is needed urgently, and by then it is too late to refill the stock. The continuous low-cost intervention works because it operates on the underlying structure that produces the team's capacity to respond. The discontinuous high-cost failure works because it tests that structure all at once. This is not a moral story about diligence. It is a structural property of the system, and like most structural properties of complex systems, it rewards interventions placed at the level where the structure actually lives.
+
 ## What I would tell a younger engineer
 
-Maintain traceability the way you maintain unit tests. Not because someone is grading you on coverage. Because someday you will need to know what the system was supposed to do, and you will be glad that someone — possibly an earlier version of yourself — wrote it down in a form you can still read.
+Maintain traceability the way you maintain unit tests. Not because someone is grading you on coverage. Because someday you will need to know what the system was supposed to do, and you will be glad that someone (possibly an earlier version of yourself) wrote it down in a form you can still read.
 
 This is the kind of discipline that does not feel useful most days. It feels useful exactly once, on the worst day. That is enough.
 
