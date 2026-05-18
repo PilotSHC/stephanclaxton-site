@@ -1,0 +1,93 @@
+---
+description: Frontmatter shape, file structure, and publish cadence for articles in content/articles/. Sister rule to writing-principles (voice). Apply when creating, editing, or scheduling any essay file.
+globs: content/articles/*.md
+alwaysApply: false
+---
+
+# Article conventions
+
+Voice rules live in `writing-principles.mdc`. This rule is the mechanical complement: what every article file must contain and how it slots into the publish schedule.
+
+## Frontmatter shape (required)
+
+Every article in `content/articles/` must have YAML frontmatter with these fields, in this order:
+
+```yaml
+---
+title: Sentence-case headline, no trailing period, no em-dashes
+description: One sentence (under 200 chars) that works as the meta description and as the dek under the title. American English. No em-dashes.
+slug: kebab-case-matching-filename
+publishAt: 2026-MM-DDT09:00:00-07:00
+tags: [systems-engineering, mbse, autonomy, ...]
+linkedinHook: |
+  First paragraph of the LinkedIn post, two to four sentences.
+
+  Second paragraph. Optional. Use sparingly.
+
+  Closing line that previews what the essay actually argues. No trailing arrow. No em-dash.
+---
+```
+
+Rules per field:
+
+- `title`: sentence case, not title case. No em-dashes. No trailing punctuation. Should read as a thesis statement, not a clickbait headline.
+- `description`: one sentence, under 200 characters, ends with a period. This is what Google shows in search results and what LinkedIn shows under the link preview. Make it count.
+- `slug`: must exactly match the filename (`<slug>.md`). Kebab-case. No dates.
+- `publishAt`: ISO 8601 with explicit timezone offset. Pacific time (`-07:00` during DST, `-08:00` outside DST) for the cron alignment. Default daily slot is `09:00:00`.
+- `tags`: array of kebab-case strings. Use existing tag vocabulary where possible (`systems-engineering`, `mbse`, `sysml`, `autonomy`, `ai-systems`, `verification`, `aerospace`, `engineering-leadership`, `systems-thinking`). Add new tags only when the existing vocabulary genuinely does not fit.
+- `linkedinHook`: pipe-block scalar (`|`) so newlines are preserved. Conversational, organic, no em-dashes, no trailing arrows (`→`), no "click here" tics. Two to four short paragraphs is typical.
+
+## Body structure
+
+- The H1 is the `title` field. The body must not have its own H1.
+- Section headings are H2 (`## Title`). No H3 unless the section genuinely needs subdivision.
+- Open with one or two short paragraphs that state the thesis. Do not warm up with throat-clearing.
+- Close the body with a horizontal rule (`---`) followed by an italicized author bio paragraph. Keep the bio identical across essays for consistency.
+- Length: 1,000 to 2,000 words. Flagship pieces (like the Meadows essay) can go to 2,500. Below 800 words, ask whether the piece is finished.
+
+## Publish cadence
+
+The cron in `.github/workflows/scheduled-publish.yml` runs daily at 16:05 UTC (09:05 Pacific). When `publishAt` has passed, the scheduler:
+
+1. Generates `app/writing/<slug>/page.tsx` from the markdown.
+2. Cross-posts to Dev.to, Hashnode, Medium, and LinkedIn.
+3. Commits `content/published.json` back to `main`.
+
+Pick `publishAt` slots roughly two weeks apart for routine essays. The site's compounding effect comes from a steady cadence, not from bursts. Use the existing schedule as the reference; check `content/articles/*.md` frontmatter for the current calendar before assigning a new slot.
+
+Flagship pieces (essays explicitly engaging Meadows or another named intellectual lineage) can break cadence and slot at any free date.
+
+## Filename and slug must match
+
+`content/articles/foo-bar.md` must have `slug: foo-bar`. The scheduler uses the slug to name the generated page and to write the published-state record. A mismatch produces a silent integration bug that only surfaces at publish time.
+
+## Author bio (constant)
+
+End every essay with this exact block, including the horizontal rule:
+
+```markdown
+---
+
+*Stephan Claxton is a Systems Engineer at Applied Intuition. He previously held senior systems engineering roles at Strategic Technology Consulting (an Arcfield company) and Lockheed Martin, where he worked on model-based systems engineering for space and defense programs.*
+```
+
+For shorter pieces or non-aerospace essays, the shorter variant (without the closing clause) is also acceptable:
+
+```markdown
+---
+
+*Stephan Claxton is a Systems Engineer at Applied Intuition. He previously held senior systems engineering roles at Strategic Technology Consulting (an Arcfield company) and Lockheed Martin.*
+```
+
+Do not improvise alternative bios per essay. The bio is stable; the body is what varies.
+
+## Checklist before considering an essay ready to commit
+
+- [ ] Frontmatter has all required fields in the order above
+- [ ] `slug` matches filename
+- [ ] `publishAt` is in a free slot consistent with the existing cadence
+- [ ] `linkedinHook` is em-dash-free and has no trailing arrow
+- [ ] Body opens with thesis, not throat-clearing
+- [ ] Body closes with the standard horizontal rule plus italicized bio
+- [ ] Voice passes `writing-principles.mdc` (no em-dashes, no AI-tell vocabulary, American English)
+- [ ] Word count is 1,000 to 2,000 (or up to 2,500 for flagships)
