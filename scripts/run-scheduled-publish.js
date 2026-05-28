@@ -249,6 +249,11 @@ async function main() {
     console.log(`\nWrote ${linkedinReminders.length} LinkedIn reminder(s) to ${LINKEDIN_REMINDERS_PATH}`);
   }
 
+  if (publishedThisRun.length > 0) {
+    const { updateSiteIndex } = require('./lib/update-site-index');
+    updateSiteIndex();
+  }
+
   setOutput('any_published', publishedThisRun.length > 0 ? 'true' : 'false');
   setOutput('slugs', publishedThisRun.join(','));
   setOutput('linkedin_reminders', linkedinReminders.length > 0 ? 'true' : 'false');

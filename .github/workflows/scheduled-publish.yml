@@ -60,13 +60,25 @@ jobs:
         run: |
           git config user.name "stephanclaxton-bot"
           git config user.email "bot@stephanclaxton.com"
-          git add content/published.json app/writing/
+          git add content/published.json app/writing/ app/page.tsx app/sitemap.ts
           if git diff --staged --quiet; then
             echo "Nothing to commit."
             exit 0
           fi
           git commit -m "chore(publish): release ${{ steps.run.outputs.slugs }}"
           git push
+
+      - name: Trigger Vercel production deploy
+        if: steps.run.outputs.any_published == 'true'
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$VERCEL_DEPLOY_HOOK" ]; then
+            echo "VERCEL_DEPLOY_HOOK not set; relying on GitHub push webhook for Vercel."
+            exit 0
+          fi
+          curl -fsS -X POST "$VERCEL_DEPLOY_HOOK"
+          echo "Vercel deploy hook triggered."
 
       - name: Create LinkedIn reminder issues
         if: steps.run.outputs.linkedin_reminders == 'true'

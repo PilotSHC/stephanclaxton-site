@@ -100,11 +100,11 @@ will skip page generation if the file already exists.
 - `content/articles/<slug>.md`: the source of truth
 - Optionally: a custom `app/writing/<slug>/page.tsx` if you want rich formatting
 
-**You update manually after each release** (because it's nice to have):
-- `app/page.tsx` and `app/writing/page.tsx`: the listing pages
-- `app/sitemap.ts`: the sitemap
+**Auto-updated by the scheduler** (same commit as the article page):
+- `app/page.tsx` and `app/writing/page.tsx`: writing lists rebuilt from `content/published.json`
+- `app/sitemap.ts`: includes every site-published article URL
 
-(These could also be automated later; for now they're manual because they affect site layout.)
+**Vercel:** A push to `main` from the publish workflow triggers a production deploy automatically. For an explicit deploy (and a clearer signal in the Vercel dashboard), add a **Deploy Hook** in the Vercel project (Settings → Git → Deploy Hooks → Production) and save the URL as the `VERCEL_DEPLOY_HOOK` GitHub secret. The workflow POSTs to it after each publish commit.
 
 ## Initial setup (one time)
 

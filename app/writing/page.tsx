@@ -20,13 +20,22 @@ export default function WritingIndex() {
         <li>
           <time dateTime="2026-05">May 2026</time>
           <div>
-            <Link href="/writing/satellites-to-autonomy">
-              What satellite systems engineering taught me about building
-              autonomous vehicles
+            <Link href="/writing/reading-meadows-from-autonomy">
+              Reading Donella Meadows from inside an autonomy company
             </Link>
             <p className="dek">
-              Two domains that look nothing alike on the surface, and the MBSE
-              discipline that translates between them.
+              A book about ecosystems and global resource flows is the most useful thing I have read for autonomy engineering. Why Meadows&#39;s leverage points matter more for AV development than additional simulation miles ever will.
+            </p>
+          </div>
+        </li>
+        <li>
+          <time dateTime="2026-05">May 2026</time>
+          <div>
+            <Link href="/writing/satellites-to-autonomy">
+              What satellite systems engineering taught me about building autonomous vehicles
+            </Link>
+            <p className="dek">
+              Two domains that look nothing alike on the surface, and the MBSE discipline that translates between them.
             </p>
           </div>
         </li>
