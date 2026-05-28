@@ -1,5 +1,5 @@
 // scripts/run-scheduled-publish.js
-// The cron entrypoint. Run every hour by GitHub Actions.
+// The cron entrypoint. Run daily by GitHub Actions.
 //
 // For each article in content/articles/:
 //   - Parse publishAt
@@ -7,8 +7,10 @@
 //   - Publishers themselves check the per-platform state and are idempotent
 //
 // Outputs:
-//   - GITHUB_OUTPUT: any_published=true|false, slugs=comma-separated
+//   - GITHUB_OUTPUT: any_published=true|false, slugs=comma-separated,
+//     linkedin_reminders=true|false
 //   - Updated content/published.json (committed by the workflow)
+//   - content/linkedin-reminders.json (consumed by the workflow, then deleted)
 
 const fs = require('fs');
 const path = require('path');
@@ -17,6 +19,12 @@ const { loadArticle, listScheduledArticles } = require('./lib/load-article');
 const { read: readState } = require('./lib/published-state');
 
 const ALL_PLATFORMS = ['site', 'devto', 'hashnode', 'medium', 'linkedin'];
+
+const LINKEDIN_REMINDERS_PATH = path.join(
+  process.cwd(),
+  'content',
+  'linkedin-reminders.json',
+);
 
 function isDue(article) {
   if (!article.publishAt) return false; // unscheduled drafts are skipped
@@ -159,19 +167,29 @@ function setOutput(key, value) {
 }
 
 async function main() {
-  const slugs = listScheduledArticles();
+  const forceSlug = process.env.FORCE_SLUG || '';
+  const slugs = forceSlug
+    ? [forceSlug]
+    : listScheduledArticles();
+
   if (slugs.length === 0) {
     console.log('No articles in content/articles/');
     setOutput('any_published', 'false');
     setOutput('slugs', '');
+    setOutput('linkedin_reminders', 'false');
     return;
   }
 
+  if (forceSlug) {
+    console.log(`Force-publishing: ${forceSlug}`);
+  }
+
   const publishedThisRun = [];
+  const linkedinReminders = [];
 
   for (const slug of slugs) {
     const article = loadArticle(slug);
-    if (!isDue(article)) {
+    if (!forceSlug && !isDue(article)) {
       console.log(`⏳ ${slug}: not due yet (publishAt=${article.publishAt || 'none'})`);
       continue;
     }
@@ -191,7 +209,6 @@ async function main() {
     if (remaining.includes('site')) {
       const generated = generateSitePage(article);
       if (generated) {
-        // Mark site as published by updating state directly
         const { markPublished } = require('./lib/published-state');
         markPublished(slug, 'site', article.canonicalUrl);
         anySucceeded = true;
@@ -210,11 +227,31 @@ async function main() {
       if (runPublisher('publish-linkedin.js', slug)) anySucceeded = true;
     }
 
-    if (anySucceeded) publishedThisRun.push(slug);
+    if (anySucceeded) {
+      publishedThisRun.push(slug);
+
+      if (!isPlatformEnabled('linkedin') || remaining.includes('linkedin')) {
+        linkedinReminders.push({
+          slug,
+          title: article.title,
+          url: article.canonicalUrl,
+          linkedinHook: article.linkedinHook || '',
+        });
+      }
+    }
+  }
+
+  if (linkedinReminders.length > 0) {
+    fs.writeFileSync(
+      LINKEDIN_REMINDERS_PATH,
+      JSON.stringify(linkedinReminders, null, 2) + '\n',
+    );
+    console.log(`\nWrote ${linkedinReminders.length} LinkedIn reminder(s) to ${LINKEDIN_REMINDERS_PATH}`);
   }
 
   setOutput('any_published', publishedThisRun.length > 0 ? 'true' : 'false');
   setOutput('slugs', publishedThisRun.join(','));
+  setOutput('linkedin_reminders', linkedinReminders.length > 0 ? 'true' : 'false');
 
   console.log(`\nRun complete. Published this run: ${publishedThisRun.join(', ') || '(none)'}`);
 }
