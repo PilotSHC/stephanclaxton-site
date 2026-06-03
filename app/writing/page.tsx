@@ -18,6 +18,17 @@ export default function WritingIndex() {
 
       <ul className="writing-list" style={{ marginTop: "2rem" }}>
         <li>
+          <time dateTime="2026-06">June 2026</time>
+          <div>
+            <Link href="/writing/system-models-belong-in-ci">
+              Your system model belongs in CI, not your document repository
+            </Link>
+            <p className="dek">
+              The shift from descriptive models to executable ones is what finally makes system-level engineering compatible with the cadence of modern autonomy and AI development.
+            </p>
+          </div>
+        </li>
+        <li>
           <time dateTime="2026-05">May 2026</time>
           <div>
             <Link href="/writing/reading-meadows-from-autonomy">
