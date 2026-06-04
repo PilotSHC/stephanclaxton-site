@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Your system model belongs in CI, not your document repository",
-  description: "The shift from descriptive models to executable ones is what finally makes system-level engineering compatible with the cadence of modern autonomy and AI development.",
+  description: "SysML v2 helps, but the harder shift is how systems engineers work when AI handles the typing and git owns the truth.",
   openGraph: {
     title: "Your system model belongs in CI, not your document repository",
-    description: "The shift from descriptive models to executable ones is what finally makes system-level engineering compatible with the cadence of modern autonomy and AI development.",
+    description: "SysML v2 helps, but the harder shift is how systems engineers work when AI handles the typing and git owns the truth.",
     type: "article",
     publishedTime: "2026-06-03T09:00:00-07:00",
     authors: ["Stephan Claxton"],
@@ -42,29 +42,35 @@ export default function Article() {
           Stephan Claxton, Systems Engineer at Applied Intuition
         </div>
 
-        <p>For thirty years, systems models have lived in document repositories. Engineers built them in heavyweight desktop tools, exported them as PDFs for review, and watched them quietly drift out of sync with what the teams actually shipped. The discipline of model-based systems engineering survived this not because the models were useful in real time, but because the alternative (no system-level reasoning at all) was worse.</p>
-        <p>SysML v2 changes the economics of that arrangement. Not because the language is better designed than its predecessor, though it is. The real shift is structural: the models can finally live where the rest of the engineering work lives.</p>
-        <h2>The case for putting models in git</h2>
-        <p>A SysML v2 model is text. That sounds trivial, but it's the difference between a model that participates in your engineering workflow and one that doesn't. You can diff it. You can review it. You can merge two engineers' changes. You can revert a commit that broke an invariant. You can write a tool that runs on every push.</p>
-        <p>These are the same affordances that made software engineering productive for the last two decades. Systems engineering has been doing without them, and the cost shows up everywhere: in models that lag the implementation by months, in interface documents that nobody fully trusts, in design reviews that surface "the model doesn't reflect the current architecture" as a recurring agenda item.</p>
-        <h2>What CI for systems models actually looks like</h2>
-        <p>Concretely, here's what a CI pipeline for a SysML v2 model can do today:</p>
-        <p>A pre-commit step parses the model and checks that every requirement has a verification method assigned. A pull request check confirms that every newly introduced interface has both a sender and a receiver. A nightly job runs the model's executable behavior against a scenario library and reports which requirements are still satisfied. A deploy gate refuses to ship if any safety-relevant requirement has degraded its verification status.</p>
-        <p>None of this requires new tooling categories. It requires treating the model as a first-class artifact that goes through the same review machinery as the code.</p>
-        <h2>The cultural lift is harder than the technical lift</h2>
-        <p>Most teams I've watched try this hit the same wall: the systems engineers want to keep working in their familiar graphical tools, and the software engineers don't want to learn SysML. The models stay in the desktop tool, the CI integration becomes a one-way export, and within six months the model is back to being a quarterly artifact.</p>
-        <p>The teams that succeed treat the model the same way they treat any other piece of source code. The graphical view becomes a rendering of the text, not the canonical form. New engineers are taught to read the SysML the way they're taught to read TypeScript. Pull requests touch both code and model files together. Architectural decisions are recorded in commit messages.</p>
-        <p>This is a real shift, and not everyone wants to make it. But the teams that do start to get something genuinely new: a system-level reasoning layer that stays current with the implementation because it has nowhere else to drift to.</p>
-        <h2>What changes downstream</h2>
-        <p>Once the model lives in CI, a few second-order effects show up.</p>
-        <p>Verification becomes more honest. When the verification status of every requirement is computed from the model's last test run, "we tested that" gets replaced with "the requirement was satisfied on commit a1b2c3d4."</p>
-        <p>Cross-team coordination gets faster. Interface changes propagate visibly. A subsystem team that breaks a contract sees the build go red the same way a software team would.</p>
-        <p>Onboarding gets easier. New engineers can read the system architecture by reading the repository, not by sitting through a series of overview presentations.</p>
-        <p>None of these are revolutionary on their own. Together, they start to look like systems engineering at software cadence.</p>
-        <h2>Where this is heading</h2>
-        <p>The interesting question is what happens when this becomes normal. Systems engineering as a discipline has spent decades arguing that it deserves a seat at the table during early architecture work. The honest answer is that the seat has often been awkward because the artifacts didn't keep up. Models that lag implementation by months don't earn a seat anywhere.</p>
-        <p>Models that live in the same repository as the code, with the same review process and the same continuous validation, are a different proposition. They can be referenced in design discussions because they reflect what's actually true. They can be argued with because they're precise enough to be wrong.</p>
-        <p>That's the shift worth paying attention to. SysML v2 is the version of the language that finally makes it possible.</p>
+        <p>AI has changed what a normal week looks like for many systems engineers. You spend hours in chat interfaces and agent panels. You steer a model, read a proposed change, accept or reject it. You may not write code yourself. The work still feels like engineering. The artifacts you touch increasingly look like software engineering artifacts.</p>
+        <p>I was reminded how uneven that transition is when I walked a colleague through a pull request on GitHub. A serious engineer. Years of model-based systems engineering. Comfortable with requirements, interfaces, verification matrices. They stared at the screen and said, quietly, that they did not recognize the UI. Not the ideas. The layout. Where the model file lived. What a failing check meant. Which panel was the diff.</p>
+        <p>That was not a GitHub training problem. It was a structural mismatch. We trained a generation of systems engineers to think in document repositories, review slides, and desktop modeling tools. Autonomy and AI development run on version control, continuous integration, and interfaces that assume you already live there. SysML v2 matters because it finally lets the system model enter that world. It does not, by itself, move the engineer.</p>
+        <h2>Where systems engineers actually work now</h2>
+        <p>The behavior has changed before the job title caught up. You interact with UIs all day. An agent proposes a requirements edit. A copilot drafts an interface change. You judge whether the change preserves the safety argument. You may never open an IDE. You are still doing systems engineering. You are doing it through surfaces that were built for people who treat text files in a repository as the source of truth.</p>
+        <p>That last clause is the part that breaks for many MBSE practitioners. The model was always "the truth," but the truth lived in a tool-specific database or a PDF export. Review meant a meeting. Synchronization meant a heroic integration effort once per quarter. The software team shipped daily. The system model caught up when someone had time.</p>
+        <p>AI accelerates the front half of that gap. You can produce model changes faster than ever. If the model still lives outside git, you have only sped up the drift.</p>
+        <h2>SysML v2 is good. It is not the whole shift.</h2>
+        <p>SysML v2 is text. That is the technical unlock. You can diff it, branch it, review it in a pull request, reject a bad merge. You can hook it to CI the same way you hook code. The language is cleaner than v1. The serialization format is the bigger deal.</p>
+        <p>Treating v2 as a language upgrade misses the point. The point is to change where the model lives and what happens when someone edits it. A text model in a document repository is still a document. A text model on a branch, with checks that run when you push, is a participant in the engineering system.</p>
+        <p>Most teams I have seen stall at the language step. They install a v2 editor, export to git occasionally, and call it modernization. Six months later the canonical model is back in the desktop tool and the repository copy is stale. The structure reverted. The behavior followed.</p>
+        <h2>What the GitHub moment was really about</h2>
+        <p>My colleague did not need a feature tour. They needed a different default picture of how engineering work is stored and reviewed.</p>
+        <p>In their picture, the system lives in a model you open. In the software picture, the system lives in files that move through review gates. Commits are the audit trail. A red CI check is a failed verification, not an IT error. The pull request is the design review room.</p>
+        <p>Once you see it that way, the GitHub UI is just one rendering of a pattern. GitLab looks different. So does the inside of a large company's monorepo browser. The pattern is stable: propose a change, show the diff, run automated checks, merge or reject.</p>
+        <p>Systems engineers who work alongside autonomy teams need that pattern in muscle memory, even if they never become application developers. Not because they will push application code. Because the system model has to ride the same rails as the code it describes. Otherwise the AI tools speed up local edits while the fleet ships something else.</p>
+        <h2>What CI for a system model looks like in practice</h2>
+        <p>When the model is a first-class repository artifact, the checks are familiar.</p>
+        <p>A pull request can fail if a new requirement has no verification method. If an interface appears with a sender and no receiver. If an executable scenario no longer satisfies a safety requirement the program thought was closed. If a parameter change broke a constraint that was supposed to be invariant.</p>
+        <p>None of that is exotic tooling. It is the same contract software teams already enforce on code, applied to the model file instead of only the implementation.</p>
+        <p>The cultural work is harder than wiring the checks. Graphical views are fine as views. They cannot remain the only place the model is real. New hires need to read SysML the way software hires read TypeScript: not fluently on day one, but without treating the text as someone else's problem. Pull requests need to touch model and implementation together when the change crosses that boundary.</p>
+        <h2>AI makes the anchor more important, not less</h2>
+        <p>There is a tempting story that AI removes the need for formal models. The opposite is closer to true for high-consequence systems. If engineers spend their day steering agents, the repository is what keeps the agents aligned with something durable. Without that anchor, you get fast, plausible, locally coherent edits that do not compose into a system argument.</p>
+        <p>The systems engineer's job shifts toward curating the structure the agents operate on: what is in scope, what is verified, what interfaces exist, what must not change without review. That is still systems thinking. It is systems thinking where the artifact has to survive contact with CI and a merge queue.</p>
+        <p>SysML v2 gives you a portable way to write that artifact. Putting it in CI gives you a way to enforce that the artifact still matches what the organization is willing to ship. Training engineers to read the repository gives you a way to keep human judgment in the loop when the UIs change again, as they will.</p>
+        <h2>The shift worth making</h2>
+        <p>The industry has spent years arguing that systems engineering deserves a seat in early architecture work. The seat stays empty when the model is a quarterly PDF. It earns its place when the model is current enough to argue with in the same forum where code is argued with.</p>
+        <p>That is the shift behind the title of this piece. Not a tooling fad. A change in where the model lives, which changes what "keeping it updated" means, which changes whether systems engineers and software engineers are looking at the same object.</p>
+        <p>SysML v2 makes it possible. Git, pull requests, and CI make it stick. The hard part is the mindset: the repository is the workshop now, even when you never typed a line of application code yourself.</p>
         <hr />
         <p className="endnote">Stephan Claxton is a Systems Engineer at Applied Intuition. He previously held senior systems engineering roles at Strategic Technology Consulting (an Arcfield company) and Lockheed Martin.</p>
       </article>
