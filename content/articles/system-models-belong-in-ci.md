@@ -9,7 +9,7 @@ linkedinHook: |
 
   I walked a colleague through a GitHub pull request last month. Deep MBSE background. Did not recognize the screen. That is not a GitHub training problem.
 
-  SysML v2 is good. The mindset shift is bigger.
+  SysML v2 is good. The mindset shift is bigger, and it needs a real transition. Most people still live in UIs and docs.
 ---
 
 AI has changed what a normal week looks like for many systems engineers. You spend hours in chat interfaces and agent panels. You steer a model, read a proposed change, accept or reject it. You may not write code yourself. The work still feels like engineering. The artifacts you touch increasingly look like software engineering artifacts.
@@ -54,6 +54,16 @@ None of that is exotic tooling. It is the same contract software teams already e
 
 The cultural work is harder than wiring the checks. Graphical views are fine as views. They cannot remain the only place the model is real. New hires need to read SysML the way software hires read TypeScript: not fluently on day one, but without treating the text as someone else's problem. Pull requests need to touch model and implementation together when the change crosses that boundary.
 
+## This shift will take time
+
+None of that happens on a single mandate. Most systems engineers still do their real work inside UIs and document repositories. The slide deck is how they align a review. The desktop model is where they think. The agent panel is where they draft. Those surfaces are not stupid habits. They are the workflow the organization built, rewarded, and staffed for.
+
+Asking everyone to abandon that overnight, in favor of raw files in a repository, will fail the same way every "just put it in Confluence" initiative failed in the other direction. The goal is not to shame people for living in docs. The goal is to move the canonical system record, slowly and visibly, to a place the software organization already trusts.
+
+A workable transition looks boring on purpose. Keep the familiar UI for authoring while git becomes the system of record. Export to the document repository on a schedule the program still expects, but stop treating that export as the truth. Pair a systems engineer with someone who already reads pull requests. Run one subsystem through model-in-CI first, not the whole vehicle at once. Let review meetings keep happening while a failing check on the model starts to mean the same thing as a failing check on the code.
+
+That transition can take quarters, not sprints. The teams that rush it burn goodwill. The teams that never start stay on the wrong side of the gap my colleague felt on GitHub. Patience is not the same as complacency. You are changing where truth lives, and people need time to rebuild their mental map.
+
 ## AI makes the anchor more important, not less
 
 There is a tempting story that AI removes the need for formal models. The opposite is closer to true for high-consequence systems. If engineers spend their day steering agents, the repository is what keeps the agents aligned with something durable. Without that anchor, you get fast, plausible, locally coherent edits that do not compose into a system argument.
@@ -68,7 +78,7 @@ The industry has spent years arguing that systems engineering deserves a seat in
 
 That is the shift behind the title of this piece. Not a tooling fad. A change in where the model lives, which changes what "keeping it updated" means, which changes whether systems engineers and software engineers are looking at the same object.
 
-SysML v2 makes it possible. Git, pull requests, and CI make it stick. The hard part is the mindset: the repository is the workshop now, even when you never typed a line of application code yourself.
+SysML v2 makes it possible. Git, pull requests, and CI make it stick. The hard part is the mindset, and mindsets change on a transition plan, not a rollout email. Many engineers will keep living in UIs and docs for a long time. The repository has to become the workshop anyway, even for people who never typed a line of application code themselves. Give them a bridge, not a cliff.
 
 ---
 
