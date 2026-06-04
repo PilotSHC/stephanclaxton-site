@@ -14,7 +14,7 @@ linkedinHook: |
 
 AI has changed what a normal week looks like for many systems engineers. You spend hours in chat interfaces and agent panels. You steer a model, read a proposed change, accept or reject it. You may not write code yourself. The work still feels like engineering. The artifacts you touch increasingly look like software engineering artifacts.
 
-I was reminded how uneven that transition is when I walked a colleague through a pull request on GitHub. A serious engineer. Years of model-based systems engineering. Comfortable with requirements, interfaces, verification matrices. They stared at the screen and said, quietly, that they did not recognize the UI. Not the ideas. The layout. Where the model file lived. What a failing check meant. Which panel was the diff.
+I was reminded how uneven that transition is when I walked a colleague through a pull request on GitHub. A serious engineer, with years of model-based systems engineering behind them, comfortable with requirements, interfaces, and verification matrices. They understood the engineering on the slide. On GitHub they did not know where the model file lived, what a failing check meant, or which panel held the diff. They said, quietly, that they did not recognize the interface at all.
 
 That was not a GitHub training problem. It was a structural mismatch. We trained a generation of systems engineers to think in document repositories, review slides, and desktop modeling tools. Autonomy and AI development run on version control, continuous integration, and interfaces that assume you already live there. SysML v2 matters because it finally lets the system model enter that world. It does not, by itself, move the engineer.
 
