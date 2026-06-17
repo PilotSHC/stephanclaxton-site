@@ -20,11 +20,22 @@ export default function WritingIndex() {
         <li>
           <time dateTime="2026-06">June 2026</time>
           <div>
+            <Link href="/writing/requirements-traceability-survival-skill">
+              Requirements traceability is a survival skill, not a compliance checkbox
+            </Link>
+            <p className="dek">
+              What aerospace gets right about traceability, what autonomous vehicle development is still figuring out, and why the answer changes depending on who is asking the question.
+            </p>
+          </div>
+        </li>
+        <li>
+          <time dateTime="2026-06">June 2026</time>
+          <div>
             <Link href="/writing/system-models-belong-in-ci">
               Your system model belongs in CI, not your document repository
             </Link>
             <p className="dek">
-              The shift from descriptive models to executable ones is what finally makes system-level engineering compatible with the cadence of modern autonomy and AI development.
+              SysML v2 helps, but the harder shift is how systems engineers work when AI handles the typing and git owns the truth.
             </p>
           </div>
         </li>
