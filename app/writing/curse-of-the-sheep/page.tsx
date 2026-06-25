@@ -3,13 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The curse of the sheep",
   description: "Reflections on context, mastery, and systems engineering from INCOSE IS 2026, and why the discipline exists to preserve understanding across time.",
-  openGraph: {
-    title: "The curse of the sheep",
-    description: "Reflections on context, mastery, and systems engineering from INCOSE IS 2026, and why the discipline exists to preserve understanding across time.",
-    type: "article",
-    publishedTime: "2026-08-26T09:00:00-07:00",
-    authors: ["Stephan Claxton"],
-  },
+  openGraph: { title: "The curse of the sheep", description: "Reflections on context, mastery, and systems engineering from INCOSE IS 2026, and why the discipline exists to preserve understanding across time.", type: "article", publishedTime: "2026-08-26T09:00:00-07:00", authors: ["Stephan Claxton"] },
 };
 
 const articleSchema = {
@@ -29,118 +23,71 @@ const articleSchema = {
 };
 
 export default function Article() {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <article className="article">
-        <div className="meta">Essay</div>
-        <h1>The curse of the sheep</h1>
-        <div className="byline">
-          Stephan Claxton, Systems Engineer at Applied Intuition
-        </div>
-
-        <p>"The Curse of the Sheep is what drives us forward today."</p>
-        <p>There are always a handful of moments that survive a conference.</p>
-        <p>Most of the presentations eventually blur together. The slides become difficult to distinguish. Even the best ideas slowly fade into pages of notes.</p>
-        <p>Yet somehow, months or years later, one unexpected conversation is often the one you remember.</p>
-        <p>When I think back on INCOSE IS 2026 in Yokohama, that conversation did not happen inside the conference center.</p>
-        <p>It happened over a cup of coffee.</p>
-        <p>By the sixth day of the symposium, my notebook had become a collection of disconnected ideas.</p>
-        <p>The week had started with tutorials from many of the people who helped shape modern systems engineering. The conversations had gradually shifted toward AI, SysML v2, digital engineering, knowledge graphs, semantic technologies, and the future of engineering.</p>
-        <p>Every session was interesting.</p>
-        <p>Every conversation added another idea.</p>
-        <p>But they still felt like individual puzzle pieces.</p>
-        <p>I did not yet know what picture they were forming.</p>
-        <p>That afternoon, my wife and I wandered into a small coffee roastery in Yokohama.</p>
-        <p>It was not on our itinerary.</p>
-        <p>It was not recommended by the conference.</p>
-        <p>It simply looked interesting.</p>
-        <p>Inside, shelves were lined with freshly roasted beans. Brewing equipment covered nearly every table. The owner greeted us warmly and asked if we would like to learn about his coffee.</p>
-        <p>What I assumed would be a quick stop turned into nearly an hour.</p>
-        <p>He told us he had spent twenty-three years working with coffee and sixteen years roasting it.</p>
-        <p>Then he started explaining his process.</p>
-        <p>I expected to hear about beans.</p>
-        <p>Instead, he talked about humidity.</p>
-        <p>Every morning, before roasting, he measures the humidity inside the shop.</p>
-        <p>As he spoke, another variable appeared.</p>
-        <p>Water chemistry.</p>
-        <p>Then another.</p>
-        <p>Roast profile.</p>
-        <p>Then another.</p>
-        <p>Extraction.</p>
-        <p>Everything seemed connected to everything else.</p>
-        <p>I asked why he still measured the humidity after all these years.</p>
-        <p>He looked at me as though the answer were obvious.</p>
-        <p>Because today's humidity is not yesterday's.</p>
-        <p>That answer stayed with me.</p>
-        <p>Not because it was surprising.</p>
-        <p>Because I realized I had expected something different.</p>
-        <p>Somewhere along the way I had convinced myself that expertise meant needing fewer observations.</p>
-        <p>His experience had led him in the opposite direction.</p>
-        <p>The longer he practiced his craft, the more carefully he observed it.</p>
-        <p>Before leaving, I noticed a small wooden sign hanging on the wall.</p>
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} /><article className="article"><div className="meta">Essay</div><h1>The curse of the sheep</h1><div className="byline">Stephan Claxton, Systems Engineer at Applied Intuition</div><p>There are always a handful of moments that survive a conference.</p>
+        <p>The presentations eventually blur together. The slides become difficult to distinguish. Even the conversations that seemed profound at the time slowly fade into pages of notes and photographs that rarely get opened again.</p>
+        <p>But every now and then, something completely unexpected becomes the part you remember.</p>
+        <p>When I think back on INCOSE IS 2026 in Yokohama, it is not a keynote or a presentation that comes to mind first.</p>
+        <p>It is a small coffee roastery tucked away on a quiet street.</p>
+        <p>By the sixth day of the symposium, I had spent nearly a week immersed in systems engineering. The conference had begun with tutorials taught by many of the people who helped shape the discipline itself. The conversations gradually expanded into digital engineering, SysML v2, artificial intelligence, semantic technologies, knowledge graphs, digital threads, and the future of engineering. Every session introduced another idea worth exploring, and by the end of the week my notebook had become a collection of observations that I had not yet figured out how to connect.</p>
+        <p>That afternoon, my wife and I wandered through Yokohama looking for a place to grab a cup of coffee before dinner.</p>
+        <p>We found a small neighborhood roastery that was not on any list of recommended places. It simply looked interesting, so we walked in.</p>
+        <p>The owner greeted us warmly and asked if we would like to learn about his coffee.</p>
+        <p>What I expected to be a fifteen-minute stop turned into nearly an hour.</p>
+        <p>He told us he had been working with coffee for twenty-three years and roasting for sixteen. As he walked us through the different beans and brewing methods, I found myself paying less attention to the equipment and more attention to the way he thought. Every explanation seemed to begin with a condition, a relationship, or a tradeoff. Nothing was ever described in isolation.</p>
+        <p>At one point he began explaining his roasting process. Before roasting a single batch each morning, he measures the humidity inside the shop. Later, while preparing coffee, he measures the pH of the water. As the conversation continued, more variables surfaced. The humidity influenced the roast. The roast influenced extraction. Water chemistry influenced flavor. Every answer seemed to reveal another relationship that had to be understood before the next decision could be made.</p>
+        <p>I finally asked him why he still measured the humidity every morning after so many years.</p>
+        <p>He looked at me for a moment, almost surprised by the question.</p>
+        <p>Then he smiled.</p>
+        <p>"Because today's humidity is not yesterday's."</p>
+        <p>The answer was so simple that the conversation moved on almost immediately.</p>
+        <p>But I did not.</p>
+        <p>I kept thinking about it.</p>
+        <p>Somewhere along the way, I had come to believe that expertise meant relying less on observation. I assumed that years of experience gradually replaced the need to measure, verify, and question. Standing in that coffee shop, I realized I was watching someone whose experience had led him in exactly the opposite direction. The longer he practiced his craft, the more attentive he had become to the subtle changes in the system around him.</p>
+        <p>As we were leaving, I noticed a small wooden sign hanging on the wall.</p>
         <p>"The Curse of the Sheep is what drives us forward today."</p>
         <p>I asked him what it meant.</p>
-        <p>He smiled.</p>
-        <p>He told me the story of Kaldi, the Ethiopian shepherd who noticed his sheep behaving differently after eating bright red berries.</p>
-        <p>Most people would have walked past.</p>
-        <p>Kaldi stopped.</p>
-        <p>He asked why.</p>
-        <p>That question eventually led to coffee.</p>
-        <p>I smiled, thanked him for the coffee, and we left.</p>
-        <p>At the time, I thought it was simply a charming story.</p>
-        <p>I did not realize it would become the lens through which I would reinterpret the previous six days.</p>
+        <p>He told me the story of Kaldi, the Ethiopian shepherd who noticed his sheep behaving strangely after eating bright red berries. While everyone else walked past, Kaldi stopped long enough to ask why. His curiosity eventually led to the discovery of coffee.</p>
+        <p>I thanked him for the conversation, finished the last sip of my coffee, and we walked back toward the hotel.</p>
+        <p>At the time, I thought it was simply a memorable afternoon in Yokohama.</p>
+        <p>I had no idea it would become the lens through which I would understand everything I had experienced during the previous six days.</p>
         <h2>Looking back through my notes</h2>
-        <p>On the walk back to my hotel, I could not stop thinking about the coffee roaster.</p>
-        <p>It was not because of the coffee itself. It was because of a question I had not expected to leave with.</p>
-        <p>Why was someone with twenty-three years of experience still measuring the humidity every morning?</p>
-        <p>The more I thought about it, the more I realized I had walked into his shop carrying an assumption I had not even recognized. I assumed experience meant certainty. I assumed that after enough years, the measurements would become less important because instinct would replace them.</p>
-        <p>Instead, I had watched the opposite happen.</p>
-        <p>His experience had not reduced the number of variables he considered. If anything, it had expanded them. Every answer he gave led to another relationship. Humidity influenced the roast. The roast influenced extraction. Water chemistry influenced flavor. Nothing existed in isolation, and he never spoke about a single decision without explaining what it affected.</p>
-        <p>By the time I got back to the hotel, I found myself opening my notebook from the conference.</p>
-        <p>I was not looking for a specific presentation. I was trying to understand why that conversation had stayed with me.</p>
-        <p>As I flipped through six days of notes, I began noticing something I had completely missed while sitting in the sessions.</p>
-        <p>The conference was not giving me disconnected ideas.</p>
+        <p>That evening, back at the hotel, I opened my notebook.</p>
+        <p>It was not because I wanted to review the conference. I was trying to understand why a conversation about coffee had stayed with me more than any of the presentations I had attended.</p>
+        <p>As I started flipping through six days of notes, I realized something I had not noticed while I was living it.</p>
+        <p>The conference was not giving me dozens of unrelated ideas.</p>
         <p>It was returning to the same idea from different directions.</p>
-        <p>The symposium had opened with tutorials led by many of the people who helped shape modern systems engineering. Before anyone talked about AI, SysML v2, or digital engineering, they talked about the foundations of the discipline: stakeholders, architecture, verification, trade studies, and systems thinking. At the time, I appreciated those sessions because they grounded the rest of the week. Looking back, I think they were doing something more subtle. They were reminding us that systems engineering has never been defined by its tools. It has always been defined by the quality of the decisions those tools enable.</p>
-        <p>As the conference progressed, the conversations naturally shifted toward newer topics. There were demonstrations of SysML v2, discussions about digital engineering and AI, presentations on semantic technologies, knowledge graphs, digital threads, and every emerging capability shaping the future of our profession.</p>
-        <p>I arrived expecting those technologies to dominate the conference.</p>
-        <p>They certainly dominated the agenda.</p>
-        <p>What surprised me was that they did not dominate the conversations I remembered most.</p>
-        <p>Instead, I kept hearing people ask a different set of questions.</p>
-        <p>How do we help stakeholders understand increasingly complex systems?</p>
-        <p>How do we preserve engineering knowledge across decades-long programs?</p>
-        <p>How do we ensure that a model becomes something people can reason with rather than simply something they maintain?</p>
-        <p>Those are not really questions about tools.</p>
+        <p>The week had begun with tutorials led by many of the people who helped shape modern systems engineering. Before anyone talked about AI or SysML v2, they talked about stakeholders, architecture, verification, trade studies, and systems thinking. At the time, I appreciated those sessions because they grounded the rest of the conference. Looking back, I think they were doing something else. They were reminding us that systems engineering did not begin with tools. It began with helping people understand complex systems well enough to make informed decisions.</p>
+        <p>As the symposium progressed, the technology naturally took center stage. There were presentations on digital engineering, artificial intelligence, semantic technologies, knowledge graphs, digital threads, and the rapidly evolving SysML v2 ecosystem. Like many attendees, I arrived expecting those topics to define the week.</p>
+        <p>In one sense, they did.</p>
+        <p>They filled the agenda.</p>
+        <p>What surprised me was that they did not define the conversations I remembered most.</p>
+        <p>Instead, I found myself writing down the same kinds of questions over and over again. How do we preserve engineering knowledge as programs span decades? How do we help stakeholders understand systems that no individual can completely comprehend? How do we ensure that our models become tools for reasoning instead of repositories that quietly drift out of date?</p>
+        <p>Those are not really questions about technology.</p>
         <p>They are questions about understanding.</p>
-        <p>One presentation in particular crystallized that realization.</p>
-        <p>Saulius Pavalkis spoke about why so many Model-Based Systems Engineering initiatives struggle. I expected a discussion about notation or tooling. Instead, he presented something far more uncomfortable. Organizations often mistake modeling for understanding.</p>
-        <p>One slide found its way into my notebook almost immediately.</p>
-        <p>"The notation is fine. The organization is broken."</p>
-        <p>At first, I interpreted it as a criticism of MBSE adoption.</p>
-        <p>Later, I realized it was something much broader.</p>
-        <p>Organizations do not struggle because they lack models.</p>
-        <p>They struggle because models alone do not create shared understanding.</p>
-        <p>That thought surfaced again during a conversation with a PhD student from the Netherlands whose research focused on the Elephant Specification Language, a structured specification language developed to bridge requirements engineering and systems architecture. We spent nearly an hour talking about formal methods, semantics, and the evolution of engineering languages.</p>
+        <p>One evening I found myself in conversation with a PhD student from the Netherlands whose research centered on the Elephant Specification Language, a structured specification language developed to bridge requirements engineering and systems architecture. We talked about formal methods, semantics, and the evolution of engineering languages. It was exactly the kind of conversation I expected to have at INCOSE.</p>
         <p>A few days later we crossed paths again between sessions.</p>
-        <p>He smiled and said, "Sometimes I feel like I am just reinventing the wheel."</p>
-        <p>Without thinking, I replied, "The first wheel was a stone."</p>
-        <p>We both laughed.</p>
-        <p>The exchange lasted less than thirty seconds, but it stayed with me for the rest of the conference.</p>
-        <p>Engineering has always built upon itself. Every generation inherits the thinking of those before it. Better languages, better abstractions, and better tools do not replace that work. They extend it. Progress is not about abandoning the past. It is about preserving what we have learned while making it possible to learn something new.</p>
-        <p>The same idea appeared again in my conversations with Ray, a veteran systems engineer from Canada. We seemed to run into each other everywhere: after presentations, while waiting for coffee, and in hallway conversations between sessions. Somehow every discussion drifted toward governance.</p>
-        <p>Ray spoke passionately about efforts in Canada to place more engineering decisions into the hands of practicing engineers rather than politicians who often lack the technical context behind those decisions. Whether one agrees with every policy proposal is not really the point. What stayed with me was the principle underneath it.</p>
-        <p>Good decisions require good context.</p>
-        <p>By the end of the week, I realized none of these people had been talking about the same subject.</p>
-        <p>The coffee roaster was talking about coffee.</p>
-        <p>The PhD student was talking about formal specification languages.</p>
-        <p>Ray was talking about governance.</p>
-        <p>Saulius was talking about MBSE.</p>
-        <p>And yet, somehow, they all seemed to be pointing toward the same idea.</p>
-        <p>I just had not figured out what it was yet.</p>
+        <p>He laughed and said, "Sometimes I feel like I am just reinventing the wheel."</p>
+        <p>Without thinking, I answered, "The first wheel was a stone."</p>
+        <p>We both laughed, but the exchange stayed with me long after we walked away.</p>
+        <p>Engineering has always been an iterative discipline. Every generation inherits the work of those before it, refines it, and passes it on. Better languages do not erase earlier thinking. Better abstractions do not invalidate the foundations beneath them. They simply give us new ways to build upon what we have already learned.</p>
+        <p>That same pattern surfaced in conversations with Ray, a seasoned systems engineer from Canada. Somehow we kept running into one another after presentations, while waiting for coffee, or in the hallway between sessions. No matter where the conversation started, it eventually drifted toward governance.</p>
+        <p>Ray spoke passionately about efforts in Canada to place more engineering decisions into the hands of practicing engineers rather than politicians who often lack the technical context behind the systems they are regulating. Whether one agrees with every policy proposal was not what interested me most. What stayed with me was the principle beneath the discussion: good decisions depend on good context. Without it, even the most capable people struggle to make informed choices.</p>
+        <p>By this point I had stopped thinking these were isolated conversations.</p>
+        <p>The coffee roaster.</p>
+        <p>The PhD student.</p>
+        <p>Ray.</p>
+        <p>None of them knew each other.</p>
+        <p>None of them were talking about the same subject.</p>
+        <p>Yet somehow they all seemed to be circling the same idea.</p>
+        <p>The final piece fell into place during a presentation by Saulius Pavalkis.</p>
+        <p>He was not criticizing SysML. He was not arguing against Model-Based Systems Engineering. If anything, he was making a much more uncomfortable observation. Organizations often mistake modeling for understanding.</p>
+        <p>One slide contained a sentence that immediately found its way into my notebook.</p>
+        <p>"The notation is fine. The organization is broken."</p>
+        <p>At first, I interpreted it as a comment about MBSE adoption.</p>
+        <p>By the end of the conference, I was not so sure.</p>
+        <p>Looking back through my notes, I realized he was not talking about notation at all.</p>
+        <p>He was talking about something much deeper.</p>
+        <p>And for the first time all week, I thought I understood why that conversation in the coffee shop had stayed with me.</p>
         <h2>The purpose of the discipline</h2>
         <p>The flight home gave me something the conference could not.</p>
         <p>For the first time all week, there were no presentations to catch, no hallway conversations to continue, and no notebook demanding another page of notes. Somewhere over the Pacific, I finally had enough distance to think about what I had actually experienced.</p>
@@ -169,8 +116,5 @@ export default function Article() {
         <p>Once you learn to see systems, you stop looking for certainty.</p>
         <p>You start looking for understanding.</p>
         <hr />
-        <p className="endnote">Stephan Claxton is a Systems Engineer at Applied Intuition. He previously held senior systems engineering roles at Strategic Technology Consulting (an Arcfield company) and Lockheed Martin, where he worked on model-based systems engineering for space and defense programs.</p>
-      </article>
-    </>
-  );
+        <p className="endnote">Stephan Claxton is a Systems Engineer at Applied Intuition. He previously held senior systems engineering roles at Strategic Technology Consulting (an Arcfield company) and Lockheed Martin, where he worked on model-based systems engineering for space and defense programs.</p></article></>);
 }
