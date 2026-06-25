@@ -24,9 +24,9 @@ export default function WritingIndex() {
               The curse of the sheep
             </Link>
             <p className="dek">
-              A Yokohama coffee roaster, six days at INCOSE IS 2026, and why
-              systems engineering is the discipline of preserving engineering
-              memory.
+              Reflections on context, mastery, and systems engineering from
+              INCOSE IS 2026, and why the discipline exists to preserve
+              understanding across time.
             </p>
           </div>
         </li>

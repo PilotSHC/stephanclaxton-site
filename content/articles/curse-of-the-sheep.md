@@ -1,462 +1,374 @@
 ---
 title: The curse of the sheep
-description: A Yokohama coffee roaster, six days at INCOSE IS 2026, and why systems engineering is the discipline of preserving engineering memory.
+description: Reflections on context, mastery, and systems engineering from INCOSE IS 2026, and why the discipline exists to preserve understanding across time.
 slug: curse-of-the-sheep
 publishAt: 2026-08-26T09:00:00-07:00
 tags: [systems-engineering, mbse, engineering-leadership, systems-thinking]
 linkedinHook: |
-  The moment I keep returning to from INCOSE IS 2026 didn't happen in a tutorial or a keynote.
+  When I think back on INCOSE IS 2026 in Yokohama, the conversation I remember most didn't happen inside the conference center.
 
-  It happened in a small coffee roastery in Yokohama, where a wooden sign read: "The Curse of the Sheep is what drives us forward today."
+  It happened over a cup of coffee, with a roaster who still measures humidity every morning after twenty-three years in the craft.
 
-  Six days of systems engineering conversations later, I think I finally understood what he meant.
+  Six days of notes later, I think I finally understood what his sign meant.
 ---
 
 "The Curse of the Sheep is what drives us forward today."
 
-There are always one or two moments from a conference that stay with you.
+There are always a handful of moments that survive a conference.
 
-Sometimes it is a keynote that changes how you think. Sometimes it is a hallway conversation with someone you have admired for years. Occasionally it is a slide that refuses to leave your notebook.
+Most of the presentations eventually blur together. The slides become difficult to distinguish. Even the best ideas slowly fade into pages of notes.
 
-The moment I keep returning to from INCOSE IS 2026 did not happen in a tutorial, a keynote, or a conference room.
+Yet somehow, months or years later, one unexpected conversation is often the one you remember.
 
-It happened in a small coffee roastery tucked away on a quiet street in Yokohama.
+When I think back on INCOSE IS 2026 in Yokohama, that conversation did not happen inside the conference center.
 
-By the time I found that little coffee shop, I had already spent six days immersed in systems engineering.
+It happened over a cup of coffee.
 
-The week had begun with tutorials taught by many of the people who helped shape the discipline itself. Before there were conversations about AI, SysML v2, or digital engineering, there were conversations about first principles: stakeholders, architecture, verification, decision making, and systems thinking. It was a reminder that systems engineering did not begin with modeling languages. It began with the challenge of understanding complexity well enough to make good decisions.
+By the sixth day of the symposium, my notebook had become a collection of disconnected ideas.
 
-As the symposium unfolded, the topics evolved. Digital engineering. Model-Based Systems Engineering. Artificial intelligence. Knowledge graphs. Semantic technologies. Digital threads. SysML v2. The future of engineering seemed to be everywhere.
+The week had started with tutorials from many of the people who helped shape modern systems engineering. The conversations had gradually shifted toward AI, SysML v2, digital engineering, knowledge graphs, semantic technologies, and the future of engineering.
 
-By the sixth day, my notebook was overflowing with ideas. My phone held dozens of photographs of presentation slides. My mind was trying to connect conversations that, at the time, still felt unrelated.
+Every session was interesting.
 
-Then I walked into that coffee shop.
+Every conversation added another idea.
 
-The shop was small, intimate, and unmistakably someone's life's work.
+But they still felt like individual puzzle pieces.
 
-Bags of carefully roasted beans lined the shelves. Brewing equipment occupied every available surface. Nothing felt performative. Nothing felt designed for Instagram. It felt like a workshop, a place where craft had been refined one careful day at a time.
+I did not yet know what picture they were forming.
 
-On the wall hung a simple wooden sign.
+That afternoon, my wife and I wandered into a small coffee roastery in Yokohama.
 
-"The Curse of the Sheep is what drives us forward today."
+It was not on our itinerary.
 
-I smiled. It sounded whimsical. Maybe an inside joke. Maybe clever branding.
+It was not recommended by the conference.
 
-I took a picture and did not think much more about it.
+It simply looked interesting.
 
-The owner greeted us warmly and, before long, what I expected to be a quick stop for coffee became an hour-long conversation.
+Inside, shelves were lined with freshly roasted beans. Brewing equipment covered nearly every table. The owner greeted us warmly and asked if we would like to learn about his coffee.
+
+What I assumed would be a quick stop turned into nearly an hour.
 
 He told us he had spent twenty-three years working with coffee and sixteen years roasting it.
 
-As he walked us through his process, I found myself paying less attention to the equipment and more attention to the way he thought.
+Then he started explaining his process.
 
-He explained different brewing techniques and why each revealed different characteristics from the same bean. He spoke about roasting profiles, extraction methods, and water chemistry, not as isolated techniques, but as relationships within a living system.
+I expected to hear about beans.
 
-Then he described how every morning begins.
+Instead, he talked about humidity.
 
-Before roasting a single bean, he measures the humidity.
+Every morning, before roasting, he measures the humidity inside the shop.
 
-Every day.
+As he spoke, another variable appeared.
 
-Not because it is part of a checklist.
+Water chemistry.
 
-Because humidity changes how the beans roast.
+Then another.
 
-Later, while brewing, he checks the pH of the water. Temperature. Humidity. Water chemistry. Roast profile. Extraction.
+Roast profile.
 
-No single variable determined the outcome.
+Then another.
 
-Each only mattered because of its relationship to the others.
+Extraction.
 
-As I listened, I realized something that felt almost backwards.
+Everything seemed connected to everything else.
 
-After twenty-three years, I expected him to rely less on measurements.
+I asked why he still measured the humidity after all these years.
 
-Instead, he relied on them more.
+He looked at me as though the answer were obvious.
 
-Experience had not eliminated uncertainty.
+Because today's humidity is not yesterday's.
 
-It had taught him where uncertainty lived.
+That answer stayed with me.
 
-Before we left, I asked him about the sign.
+Not because it was surprising.
+
+Because I realized I had expected something different.
+
+Somewhere along the way I had convinced myself that expertise meant needing fewer observations.
+
+His experience had led him in the opposite direction.
+
+The longer he practiced his craft, the more carefully he observed it.
+
+Before leaving, I noticed a small wooden sign hanging on the wall.
+
+"The Curse of the Sheep is what drives us forward today."
+
+I asked him what it meant.
 
 He smiled.
 
-It referenced the legend of Kaldi, the Ethiopian shepherd who noticed his sheep behaving strangely after eating bright red berries. While others might have ignored it, the shepherd became curious enough to investigate.
+He told me the story of Kaldi, the Ethiopian shepherd who noticed his sheep behaving differently after eating bright red berries.
 
-That curiosity eventually led to the discovery of coffee.
+Most people would have walked past.
 
-"The Curse of the Sheep," he said, "is the inability to stop asking why."
+Kaldi stopped.
 
-I left thinking it was a beautiful philosophy for making coffee.
+He asked why.
+
+That question eventually led to coffee.
+
+I smiled, thanked him for the coffee, and we left.
+
+At the time, I thought it was simply a charming story.
 
 I did not realize it would become the lens through which I would reinterpret the previous six days.
 
-## Looking back at INCOSE
+## Looking back through my notes
 
-As I walked back through Yokohama that afternoon, I could not stop thinking about something that should have seemed obvious.
+On the walk back to my hotel, I could not stop thinking about the coffee roaster.
 
-Why was a master craftsman still measuring everything?
+It was not because of the coffee itself. It was because of a question I had not expected to leave with.
 
-Should not twenty-three years of experience make the process simpler?
+Why was someone with twenty-three years of experience still measuring the humidity every morning?
 
-The more I thought about it, the more I realized I had been asking the wrong question.
+The more I thought about it, the more I realized I had walked into his shop carrying an assumption I had not even recognized. I assumed experience meant certainty. I assumed that after enough years, the measurements would become less important because instinct would replace them.
 
-Experience had not reduced the complexity of the system.
+Instead, I had watched the opposite happen.
 
-It had revealed it.
+His experience had not reduced the number of variables he considered. If anything, it had expanded them. Every answer he gave led to another relationship. Humidity influenced the roast. The roast influenced extraction. Water chemistry influenced flavor. Nothing existed in isolation, and he never spoke about a single decision without explaining what it affected.
 
-The coffee roaster was not measuring because he lacked confidence.
+By the time I got back to the hotel, I found myself opening my notebook from the conference.
 
-He was measuring because he understood how much context could change between yesterday and today.
+I was not looking for a specific presentation. I was trying to understand why that conversation had stayed with me.
 
-That realization sent me back through six days of notes.
+As I flipped through six days of notes, I began noticing something I had completely missed while sitting in the sessions.
 
-What struck me was not any single presentation.
+The conference was not giving me disconnected ideas.
 
-It was the pattern emerging across all of them.
+It was returning to the same idea from different directions.
 
-The symposium had begun with something I had not expected.
+The symposium had opened with tutorials led by many of the people who helped shape modern systems engineering. Before anyone talked about AI, SysML v2, or digital engineering, they talked about the foundations of the discipline: stakeholders, architecture, verification, trade studies, and systems thinking. At the time, I appreciated those sessions because they grounded the rest of the week. Looking back, I think they were doing something more subtle. They were reminding us that systems engineering has never been defined by its tools. It has always been defined by the quality of the decisions those tools enable.
 
-Rather than diving immediately into the latest tools and technologies, many of the opening tutorials returned to the foundations of systems engineering itself. Stakeholders. Purpose. Mission. Architecture. Verification. Decision making.
+As the conference progressed, the conversations naturally shifted toward newer topics. There were demonstrations of SysML v2, discussions about digital engineering and AI, presentations on semantic technologies, knowledge graphs, digital threads, and every emerging capability shaping the future of our profession.
 
-The people leading those sessions had spent decades shaping the discipline. They were not dismissing modern engineering. They were reminding us why the discipline existed before any of today's tooling ever appeared.
+I arrived expecting those technologies to dominate the conference.
 
-It was a subtle but important message.
+They certainly dominated the agenda.
 
-The future of systems engineering will not be built by abandoning its foundations.
+What surprised me was that they did not dominate the conversations I remembered most.
 
-It will be built by remembering why those foundations mattered in the first place.
+Instead, I kept hearing people ask a different set of questions.
 
-As the week progressed, the conversations naturally shifted.
+How do we help stakeholders understand increasingly complex systems?
 
-There were demonstrations of SysML v2. Discussions about AI-assisted engineering. Digital engineering. Knowledge graphs. Semantic technologies. Digital threads.
+How do we preserve engineering knowledge across decades-long programs?
 
-These are exciting developments, and I believe they represent an important evolution of our profession.
+How do we ensure that a model becomes something people can reason with rather than simply something they maintain?
 
-But I also noticed something different this year.
+Those are not really questions about tools.
 
-The conversations seemed less consumed by the question, "What tool should we use?" And increasingly focused on questions like: "Can this help us make better decisions?" "Can stakeholders actually understand the model?" "Can we learn faster?" "Can we trust the information we are using?"
+They are questions about understanding.
 
-Five years ago, many conference conversations felt like debates over notation.
+One presentation in particular crystallized that realization.
 
-This year felt different.
+Saulius Pavalkis spoke about why so many Model-Based Systems Engineering initiatives struggle. I expected a discussion about notation or tooling. Instead, he presented something far more uncomfortable. Organizations often mistake modeling for understanding.
 
-It felt like the community was beginning to mature beyond the notation itself.
-
-The tools were not becoming less important.
-
-They were becoming assumed.
-
-Which meant the discussion could finally move to the harder problem.
-
-Understanding.
-
-One presentation in particular crystallized that shift.
-
-Saulius Pavalkis spoke about why so many Model-Based Systems Engineering initiatives struggle.
-
-It was not a criticism of SysML.
-
-It was not a criticism of modeling.
-
-It was something much more uncomfortable.
-
-Organizations often mistake modeling for understanding.
-
-One slide contained a sentence I have not stopped thinking about.
+One slide found its way into my notebook almost immediately.
 
 "The notation is fine. The organization is broken."
 
-At first, I heard it as a statement about MBSE adoption.
+At first, I interpreted it as a criticism of MBSE adoption.
 
-Later, I realized it was a statement about learning.
+Later, I realized it was something much broader.
 
-The notation was not failing.
+Organizations do not struggle because they lack models.
 
-Organizations were failing to use it to build shared understanding.
+They struggle because models alone do not create shared understanding.
 
-As I continued flipping through my notes, I realized the conference was not giving me isolated ideas.
+That thought surfaced again during a conversation with a PhD student from the Netherlands whose research focused on the Elephant Specification Language, a structured specification language developed to bridge requirements engineering and systems architecture. We spent nearly an hour talking about formal methods, semantics, and the evolution of engineering languages.
 
-It was showing me the same idea through different people.
+A few days later we crossed paths again between sessions.
 
-One evening I spent nearly an hour talking with a PhD student from the Netherlands whose research focused on the Elephant Specification Language (ESL), a formal specification language developed at Eindhoven University of Technology. We talked about requirements, formal methods, semantics, and architecture.
-
-The conversation wandered through decades of engineering thought, from structured specifications to modern model-based engineering.
-
-A few days later we crossed paths again.
-
-He laughed.
-
-"Sometimes I feel like I am just reinventing the wheel."
+He smiled and said, "Sometimes I feel like I am just reinventing the wheel."
 
 Without thinking, I replied, "The first wheel was a stone."
 
 We both laughed.
 
-But the more I reflected on that exchange, the less it felt like a joke.
+The exchange lasted less than thirty seconds, but it stayed with me for the rest of the conference.
 
-Nothing in engineering is truly new.
+Engineering has always built upon itself. Every generation inherits the thinking of those before it. Better languages, better abstractions, and better tools do not replace that work. They extend it. Progress is not about abandoning the past. It is about preserving what we have learned while making it possible to learn something new.
 
-We are not inventing understanding.
+The same idea appeared again in my conversations with Ray, a veteran systems engineer from Canada. We seemed to run into each other everywhere: after presentations, while waiting for coffee, and in hallway conversations between sessions. Somehow every discussion drifted toward governance.
 
-We are refining it.
+Ray spoke passionately about efforts in Canada to place more engineering decisions into the hands of practicing engineers rather than politicians who often lack the technical context behind those decisions. Whether one agrees with every policy proposal is not really the point. What stayed with me was the principle underneath it.
 
-Every generation inherits the work of those before it. Better languages. Better abstractions. Better tools.
+Good decisions require good context.
 
-The responsibility is not to discard what came before.
+By the end of the week, I realized none of these people had been talking about the same subject.
 
-It is to preserve the context they created while extending it.
+The coffee roaster was talking about coffee.
 
-Another conversation kept resurfacing throughout the week.
+The PhD student was talking about formal specification languages.
 
-Ray, a seasoned systems engineer from Canada, seemed to appear everywhere. After sessions. Between talks. Waiting for coffee. Standing in hallways.
+Ray was talking about governance.
 
-Every conversation eventually drifted toward governance.
+Saulius was talking about MBSE.
 
-He described efforts in Canada to place greater engineering decision-making into the hands of practicing engineers rather than politicians who often lack the technical context of the systems they are governing.
+And yet, somehow, they all seemed to be pointing toward the same idea.
 
-Whether one agrees with every policy proposal is almost beside the point.
+I just had not figured out what it was yet.
 
-What struck me was the underlying principle.
+## The purpose of the discipline
 
-Better decisions require better context.
+The flight home gave me something the conference could not.
 
-That observation extended far beyond public policy.
+Time.
 
-It explained why digital threads fail. Why traceability breaks down. Why architecture becomes stale. Why organizations lose hard-earned knowledge. Why AI struggles when engineering information is fragmented across disconnected documents and repositories.
+For the first time all week, there were no presentations to rush to, no conversations waiting around the next corner, and no pages left to fill in my notebook.
 
-Every one of those problems is fundamentally a context problem.
+Just time to think.
 
-Looking back, I realized the coffee roaster was not teaching me about coffee.
+I kept coming back to the same question.
 
-The PhD student was not teaching me about specification languages.
+Why had a conversation about coffee become the thing I remembered most from a systems engineering conference?
 
-Ray was not teaching me about governance.
+Slowly, the answer began to emerge.
 
-Saulius was not teaching me about MBSE.
+The coffee roaster was not exceptional because he knew more facts than someone else.
 
-Each of them was illuminating a different facet of the same idea.
+He was exceptional because he understood the relationships between them.
 
-Understanding is impossible without context.
+Humidity did not matter by itself.
 
-And preserving context is the central challenge of systems engineering.
+Water chemistry did not matter by itself.
 
-## Observe, then decide
+The roast profile did not matter by itself.
 
-When I first walked into that coffee shop, I thought I was watching someone make coffee.
+Every decision only made sense within the context of the system as a whole.
 
-Looking back, I think I was watching someone practice systems engineering.
+That was exactly what I had been hearing throughout the week.
 
-Not because he understood chemistry.
+The tutorials on systems thinking were not really about diagrams. They were about helping engineers understand relationships.
 
-Not because he had perfected a process.
+Saulius was not arguing that organizations needed different notation. He was arguing that notation without shared understanding changes very little.
 
-And certainly not because he had accumulated twenty-three years of experience.
+The PhD student was not reinventing the wheel. He was extending decades of accumulated engineering knowledge.
 
-He was practicing systems engineering because every morning began with the same discipline.
+Ray was not simply talking about governance. He was talking about the importance of making decisions with the right context.
 
-Observe.
+None of them were solving the same problem.
 
-Understand.
+Yet all of them were preserving the same thing.
 
-Then decide.
+Understanding.
 
-That sequence matters.
+That realization changed how I thought about systems engineering.
 
-Too often, engineering organizations reverse it.
+For years, our profession has invested enormous energy into improving the artifacts of engineering.
 
-We decide.
+Better requirements.
 
-Then we look for data that justifies the decision.
+Better architectures.
 
-The coffee roaster did the opposite.
+Better models.
 
-Every morning he allowed reality to speak first.
+Better repositories.
 
-Only then did he act.
+Better digital threads.
 
-Somewhere over the last decade, I think many of us, including me, have become captivated by the instruments of systems engineering. Better architectures. Better repositories. Better semantic models. Better digital threads. Better AI. Better engineering intelligence.
+Better AI.
 
-Those questions are legitimate.
+Those investments matter.
 
-But somewhere between the coffee shop and the flight home, a different question became harder to ignore.
+But somewhere along the way, I think we have occasionally confused the artifacts with the discipline itself.
 
-How do we help engineers preserve and refine context?
+Requirements are not the discipline.
 
-Because that is what every one of those technologies is really trying to accomplish.
+Architecture is not the discipline.
 
-Requirements preserve stakeholder context. Architecture preserves structural context. Interfaces preserve interaction context. Verification preserves evidentiary context. Traceability preserves historical context. Ontologies preserve semantic context. Knowledge graphs preserve relationship context. Digital threads preserve lifecycle context.
+Models are not the discipline.
 
-Artificial intelligence does not create context.
+Traceability is not the discipline.
 
-It consumes it.
+They are the means by which the discipline preserves understanding across people, organizations, and time.
 
-Without context, AI cannot reason.
+Every requirement captures the memory of a stakeholder need.
 
-Without context, models become drawings.
-
-Without context, traceability becomes bureaucracy.
-
-Without context, organizations slowly forget why they made the decisions they did.
-
-Perhaps we have been solving the wrong problem.
-
-The challenge is not building smarter tools.
-
-It is ensuring those tools preserve enough context for people to make better decisions.
-
-Those instruments matter.
-
-But they are not the discipline.
-
-They are instruments.
-
-The discipline is understanding.
-
-The conference also kept returning to a question that reframes what models are for.
-
-Can the model answer a stakeholder's question?
-
-Not: can it conform to the language?
-
-Not: can it satisfy the framework?
-
-Not: can it pass the validation rules?
-
-Can it help another human being make a better decision?
-
-That is a fundamentally different objective.
-
-Models are not the customer.
-
-Engineers are not even the customer.
-
-The stakeholder is.
-
-Systems engineering has never been about creating beautiful models.
-
-It has always been about helping people make sense of complexity.
-
-The artifacts only matter because they preserve the context necessary for human understanding.
-
-For years we have talked about autonomous engineering. One-click architecture generation. AI-generated requirements. Automatically synthesized designs.
-
-Those capabilities are coming, and I believe they will transform our profession.
-
-But somewhere during INCOSE I stopped seeing the human in the loop as a limitation.
-
-I began seeing it as the strength.
-
-There is no single click that produces a thoughtful design.
-
-There is no prompt that replaces decades of engineering judgment.
-
-There is no model that understands why a stakeholder hesitated during a meeting.
-
-There is no AI that can yet recognize when the right question has not even been asked.
-
-Great engineering does not emerge from automation alone.
-
-It emerges from the conversation between human judgment and computational capability.
-
-The future is not human versus AI.
-
-It is humans equipped with richer context than they have ever had before.
-
-The human remains the integrator.
-
-The one who asks, "Does this make sense?" "What are we missing?" "What changed?" "What does this mean?"
-
-Those are not weaknesses in the process.
-
-They are the reason engineering succeeds.
-
-## Engineering memory
-
-When I boarded my flight home, I thought about the people I had met during the week.
-
-The coffee roaster who measured humidity every morning.
-
-The PhD student building on decades of formal specification research.
-
-Ray arguing that better governance begins with better engineering context.
-
-Saulius reminding us that notation is not the problem.
-
-Individually, they were telling different stories.
-
-Collectively, they were describing the same profession.
-
-A profession that has spent decades creating better representations of systems.
-
-And is now beginning to ask a more important question.
-
-How do we preserve understanding as those systems become unimaginably complex?
-
-I kept returning to the same reframing.
-
-Requirements preserve organizational memory.
-
-Architecture preserves structural memory.
-
-Traceability preserves decision memory.
-
-Verification preserves evidence.
-
-Models preserve design intent.
-
-Knowledge graphs preserve relationships.
-
-Context, when you need it for a decision, is preserved memory.
-
-The coffee roaster measures humidity because he remembers yesterday.
-
-The PhD student builds on fifty years of research because academia preserves memory.
-
-Ray wants engineers making decisions because they carry engineering memory.
-
-Saulius warns about organizations because organizations lose memory.
-
-Looking back, I no longer think the purpose of systems engineering is producing requirements, architectures, models, or digital threads.
-
-Those are artifacts.
-
-Artifacts are not the discipline.
-
-They are how the discipline preserves memory.
-
-Every requirement preserves the memory of a stakeholder need.
-
-Every architectural decision preserves the memory of why the system is structured the way it is.
+Every architectural decision captures the memory of why a system was designed the way it was.
 
 Every interface preserves the memory of how systems interact.
 
-Every verification result preserves the memory of what we learned.
+Every verification activity preserves the memory of what we have learned.
 
-Every trace preserves the memory of how one decision shaped another.
+Every traceability link preserves the memory of how one decision influenced another.
 
 Systems engineering exists because organizations forget.
 
-People leave.
-
 Programs outlive careers.
+
+Teams change.
 
 Knowledge fragments.
 
 Context disappears.
 
-The purpose of systems engineering is to preserve engineering memory so that we can continually refine our understanding of reality.
+The discipline exists to ensure understanding does not disappear with it.
+
+That realization also changed how I think about the future.
+
+For years, much of the conversation around AI has focused on replacing engineering work. Generate the requirements. Generate the architecture. Generate the design.
+
+After INCOSE, I find myself thinking about a different future.
+
+The engineer is not the bottleneck.
+
+The engineer is the integrator.
+
+The human in the loop is not a weakness in the engineering process.
+
+It is the reason the process works.
+
+There is no single click that produces a thoughtful design.
+
+There is no prompt that captures decades of organizational experience.
+
+There is no model that understands the hesitation in a stakeholder's voice or recognizes that the most important question has not yet been asked.
+
+AI will become an extraordinary engineering partner.
+
+But its greatest value will not come from replacing judgment.
+
+It will come from preserving, organizing, and presenting context so that human judgment becomes better.
+
+Looking back, I do not think the coffee roaster taught me how to make better coffee.
+
+He reminded me what mastery looks like.
+
+Mastery is not the absence of measurement.
+
+It is not perfect intuition.
+
+It is not having all the answers.
+
+Mastery is knowing that every day begins by observing the system in front of you before deciding what to do next.
+
+That, ultimately, is what I brought home from INCOSE IS 2026.
+
+Not a new language.
+
+Not a new framework.
+
+Not another tool.
+
+A renewed appreciation for the purpose of the discipline itself.
+
+The purpose of systems engineering is to preserve engineering understanding by capturing and refining the context needed to make better decisions.
+
+Everything else, from requirements and architectures to models, digital threads, ontologies, traceability, and AI, exists in service of that purpose.
 
 The coffee roaster understood that long before I did.
 
-Every morning he measured the humidity, not because he distrusted yesterday's work, but because he remembered yesterday well enough to know today would be different.
+Every morning he measured the humidity.
+
+Not because he distrusted yesterday's experience.
+
+Because he respected today's reality.
 
 That is the Curse of the Sheep.
 
-Once you learn to see systems, you stop searching for certainty.
-
-You start preserving understanding.
+Once you learn to see systems, you never stop looking for the context that helps you understand them.
 
 ---
 
