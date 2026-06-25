@@ -68,6 +68,19 @@ export default function HomePage() {
         <h2>Writing</h2>
         <ul className="writing-list">
           <li>
+            <time dateTime="2026-08">August 2026</time>
+            <div>
+              <Link href="/writing/curse-of-the-sheep">
+                The curse of the sheep
+              </Link>
+              <p className="dek">
+                A Yokohama coffee roaster, six days at INCOSE IS 2026, and why
+                systems engineering is the discipline of preserving engineering
+                memory.
+              </p>
+            </div>
+          </li>
+          <li>
             <time dateTime="2026-05">May 2026</time>
             <div>
               <Link href="/writing/satellites-to-autonomy">
