@@ -214,161 +214,55 @@ I just had not figured out what it was yet.
 
 The flight home gave me something the conference could not.
 
-Time.
+For the first time all week, there were no presentations to catch, no hallway conversations to continue, and no notebook demanding another page of notes. Somewhere over the Pacific, I finally had enough distance to think about what I had actually experienced.
 
-For the first time all week, there were no presentations to rush to, no conversations waiting around the next corner, and no pages left to fill in my notebook.
+I kept coming back to the coffee roaster.
 
-Just time to think.
+It was not because he had taught me something about coffee. It was because he had quietly challenged an assumption I did not realize I had been carrying. I had always associated expertise with certainty. I assumed that as someone became more experienced, instinct gradually replaced observation. Yet after twenty-three years of roasting coffee, he had not become less attentive to the system around him. He had become more attentive. Every morning still began with measuring the humidity because every morning the system presented him with a slightly different set of conditions. His expertise was not found in ignoring those changes. It was found in recognizing that they mattered.
 
-I kept coming back to the same question.
+As that thought settled in, the conversations from the conference began to reconnect in my mind.
 
-Why had a conversation about coffee become the thing I remembered most from a systems engineering conference?
+The tutorials on systems thinking were not really about diagrams or frameworks. They were about helping engineers understand relationships that are otherwise easy to overlook. Saulius was not arguing that organizations needed a different modeling language; he was challenging the assumption that better models automatically produce better understanding. The PhD student was not reinventing the wheel through his research into formal specification languages. He was extending decades of accumulated engineering knowledge into new domains. Ray was not simply making an argument about governance in Canada. He was making the case that better decisions require the people making them to understand the systems those decisions affect.
 
-Slowly, the answer began to emerge.
+Individually, those conversations seemed unrelated.
 
-The coffee roaster was not exceptional because he knew more facts than someone else.
+Together, they described a profession wrestling with the same challenge.
 
-He was exceptional because he understood the relationships between them.
+How do we preserve understanding as our systems become too large, too interconnected, and too long-lived for any one person to hold entirely in their head?
 
-Humidity did not matter by itself.
+That question changed the way I thought about systems engineering.
 
-Water chemistry did not matter by itself.
+For years, much of our profession has focused on improving the artifacts we create. We have built better modeling languages, more expressive architectures, richer digital threads, stronger traceability, and increasingly capable AI. Every one of those advances matters. But as I reflected on the week, I realized they all share the same purpose. None of them exist for their own sake. They exist because engineering is fundamentally a collaborative activity carried out over years, often decades, by people who will never all occupy the same room at the same time.
 
-The roast profile did not matter by itself.
+A requirement is valuable because it preserves the intent of a stakeholder long after the conversation has ended. An architecture is valuable because it captures relationships that would otherwise exist only in the mind of its author. Traceability preserves the reasoning behind decisions. Verification preserves evidence that future engineers can trust. Even AI is only as useful as the engineering understanding it is able to access and reason over.
 
-Every decision only made sense within the context of the system as a whole.
+The longer I thought about it, the more I realized that every one of these artifacts is trying to solve the same problem.
 
-That was exactly what I had been hearing throughout the week.
+Organizations forget.
 
-The tutorials on systems thinking were not really about diagrams. They were about helping engineers understand relationships.
+Projects outlive the people who started them. Engineers retire. Teams reorganize. Suppliers change. Programs evolve. Over time, the context behind thousands of engineering decisions slowly disappears, and with it disappears an organization's ability to understand why the system became what it is.
 
-Saulius was not arguing that organizations needed different notation. He was arguing that notation without shared understanding changes very little.
+That, I believe, is the real purpose of systems engineering.
 
-The PhD student was not reinventing the wheel. He was extending decades of accumulated engineering knowledge.
+The purpose of systems engineering is to preserve and continually refine engineering understanding by capturing the context required to make better decisions.
 
-Ray was not simply talking about governance. He was talking about the importance of making decisions with the right context.
+Viewed through that lens, the future of our profession looks different.
 
-None of them were solving the same problem.
-
-Yet all of them were preserving the same thing.
-
-Understanding.
-
-That realization changed how I thought about systems engineering.
-
-For years, our profession has invested enormous energy into improving the artifacts of engineering.
-
-Better requirements.
-
-Better architectures.
-
-Better models.
-
-Better repositories.
-
-Better digital threads.
-
-Better AI.
-
-Those investments matter.
-
-But somewhere along the way, I think we have occasionally confused the artifacts with the discipline itself.
-
-Requirements are not the discipline.
-
-Architecture is not the discipline.
-
-Models are not the discipline.
-
-Traceability is not the discipline.
-
-They are the means by which the discipline preserves understanding across people, organizations, and time.
-
-Every requirement captures the memory of a stakeholder need.
-
-Every architectural decision captures the memory of why a system was designed the way it was.
-
-Every interface preserves the memory of how systems interact.
-
-Every verification activity preserves the memory of what we have learned.
-
-Every traceability link preserves the memory of how one decision influenced another.
-
-Systems engineering exists because organizations forget.
-
-Programs outlive careers.
-
-Teams change.
-
-Knowledge fragments.
-
-Context disappears.
-
-The discipline exists to ensure understanding does not disappear with it.
-
-That realization also changed how I think about the future.
-
-For years, much of the conversation around AI has focused on replacing engineering work. Generate the requirements. Generate the architecture. Generate the design.
-
-After INCOSE, I find myself thinking about a different future.
-
-The engineer is not the bottleneck.
-
-The engineer is the integrator.
-
-The human in the loop is not a weakness in the engineering process.
-
-It is the reason the process works.
-
-There is no single click that produces a thoughtful design.
-
-There is no prompt that captures decades of organizational experience.
-
-There is no model that understands the hesitation in a stakeholder's voice or recognizes that the most important question has not yet been asked.
-
-AI will become an extraordinary engineering partner.
-
-But its greatest value will not come from replacing judgment.
-
-It will come from preserving, organizing, and presenting context so that human judgment becomes better.
+The question is no longer whether AI can generate a requirement or produce an architecture. Those capabilities will continue to improve, and they should. The more interesting question is whether they help engineers understand their systems more deeply than they could before. The value of AI is not that it removes the engineer from the loop. It is that it helps preserve, organize, and retrieve the context that allows engineers to exercise better judgment.
 
 Looking back, I do not think the coffee roaster taught me how to make better coffee.
 
-He reminded me what mastery looks like.
+He reminded me what mastery actually looks like.
 
-Mastery is not the absence of measurement.
+Mastery is not having fewer questions.
 
-It is not perfect intuition.
-
-It is not having all the answers.
-
-Mastery is knowing that every day begins by observing the system in front of you before deciding what to do next.
-
-That, ultimately, is what I brought home from INCOSE IS 2026.
-
-Not a new language.
-
-Not a new framework.
-
-Not another tool.
-
-A renewed appreciation for the purpose of the discipline itself.
-
-The purpose of systems engineering is to preserve engineering understanding by capturing and refining the context needed to make better decisions.
-
-Everything else, from requirements and architectures to models, digital threads, ontologies, traceability, and AI, exists in service of that purpose.
-
-The coffee roaster understood that long before I did.
-
-Every morning he measured the humidity.
-
-Not because he distrusted yesterday's experience.
-
-Because he respected today's reality.
+It is knowing which questions are worth asking every single day.
 
 That is the Curse of the Sheep.
 
-Once you learn to see systems, you never stop looking for the context that helps you understand them.
+Once you learn to see systems, you stop looking for certainty.
+
+You start looking for understanding.
 
 ---
 
