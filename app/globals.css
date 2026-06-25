@@ -18,7 +18,7 @@
   --serif: 'Fraunces', 'Iowan Old Style', 'Palatino', Georgia, serif;
   --mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
 
-  --measure: 36rem;
+  --measure: 64rem;
   --gutter: clamp(1.5rem, 4vw, 3rem);
 }
 

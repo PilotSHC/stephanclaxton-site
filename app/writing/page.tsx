@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function WritingIndex() {
   return (
-    <article className="article" style={{ maxWidth: "48rem" }}>
+    <article className="article">
       <div className="meta">Writing</div>
       <h1>
         Systems thinking, applied to engineering in the age of AI and autonomy
