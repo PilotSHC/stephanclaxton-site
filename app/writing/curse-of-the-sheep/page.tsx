@@ -3,7 +3,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The curse of the sheep",
   description: "Reflections on context, mastery, and systems engineering from INCOSE IS 2026, and why the discipline exists to preserve understanding across time.",
-  openGraph: { title: "The curse of the sheep", description: "Reflections on context, mastery, and systems engineering from INCOSE IS 2026, and why the discipline exists to preserve understanding across time.", type: "article", publishedTime: "2026-08-26T09:00:00-07:00", authors: ["Stephan Claxton"] },
+  openGraph: {
+    title: "The curse of the sheep",
+    description: "Reflections on context, mastery, and systems engineering from INCOSE IS 2026, and why the discipline exists to preserve understanding across time.",
+    type: "article",
+    publishedTime: "2026-06-25T09:00:00-07:00",
+    authors: ["Stephan Claxton"],
+  },
 };
 
 const articleSchema = {
@@ -15,7 +21,7 @@ const articleSchema = {
     "name": "Stephan Claxton",
     "url": "https://www.stephanclaxton.com"
   },
-  "datePublished": "2026-08-26T09:00:00-07:00",
+  "datePublished": "2026-06-25T09:00:00-07:00",
   "publisher": {
     "@type": "Person",
     "name": "Stephan Claxton"
@@ -27,7 +33,7 @@ export default function Article() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <article className="article">
-        <div className="meta">Essay</div>
+        <div className="meta">Essay · June 2026</div>
         <h1>The curse of the sheep</h1>
         <div className="byline">Stephan Claxton, Systems Engineer at Applied Intuition</div>
         <p>There are always a handful of moments that survive a conference.</p>

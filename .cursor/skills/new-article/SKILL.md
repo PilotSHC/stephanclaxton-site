@@ -116,9 +116,9 @@ rg -nwi '(delve|tapestry|vibrant|seamless|robust|crucial)' content/articles/<slu
 
 If the essay names Donella Meadows in the body, verify it is the flagship slot or the About page. Per `writing-principles.mdc`, Meadows is cited by name only in those two places.
 
-### Step 7: Wire it into homepage and writing index
+### Step 7: Wire it into homepage and writing index (optional at draft time)
 
-The scheduler generates `app/writing/<slug>/page.tsx` at publish time, but the homepage and writing index do not auto-update. Add an entry to both:
+The scheduler generates `app/writing/<slug>/page.tsx` at publish time and rebuilds the homepage, `/writing` index, and sitemap from `content/published.json`. You can still add an entry early for local preview:
 
 In `app/page.tsx` under the Writing section, add a new `<li>` at the top:
 

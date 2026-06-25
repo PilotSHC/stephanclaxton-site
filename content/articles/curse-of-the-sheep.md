@@ -2,7 +2,7 @@
 title: The curse of the sheep
 description: Reflections on context, mastery, and systems engineering from INCOSE IS 2026, and why the discipline exists to preserve understanding across time.
 slug: curse-of-the-sheep
-publishAt: 2026-08-26T09:00:00-07:00
+publishAt: 2026-06-25T09:00:00-07:00
 tags: [systems-engineering, mbse, engineering-leadership, systems-thinking]
 linkedinHook: |
   When I think back on INCOSE IS 2026 in Yokohama, it is not a keynote that comes to mind first.

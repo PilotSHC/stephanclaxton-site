@@ -68,7 +68,7 @@ export default function HomePage() {
         <h2>Writing</h2>
         <ul className="writing-list">
           <li>
-            <time dateTime="2026-08">August 2026</time>
+            <time dateTime="2026-06">June 2026</time>
             <div>
               <Link href="/writing/curse-of-the-sheep">
                 The curse of the sheep
@@ -81,6 +81,46 @@ export default function HomePage() {
             </div>
           </li>
           <li>
+            <time dateTime="2026-06">June 2026</time>
+            <div>
+              <Link href="/writing/requirements-traceability-survival-skill">
+                Requirements traceability is a survival skill, not a compliance
+                checkbox
+              </Link>
+              <p className="dek">
+                What aerospace gets right about traceability, what autonomous
+                vehicle development is still figuring out, and why the answer
+                changes depending on who is asking the question.
+              </p>
+            </div>
+          </li>
+          <li>
+            <time dateTime="2026-06">June 2026</time>
+            <div>
+              <Link href="/writing/system-models-belong-in-ci">
+                Your system model belongs in CI, not your document repository
+              </Link>
+              <p className="dek">
+                SysML v2 helps, but the harder shift is how systems engineers
+                work when AI handles the typing and git owns the truth.
+              </p>
+            </div>
+          </li>
+          <li>
+            <time dateTime="2026-05">May 2026</time>
+            <div>
+              <Link href="/writing/reading-meadows-from-autonomy">
+                Reading Donella Meadows from inside an autonomy company
+              </Link>
+              <p className="dek">
+                A book about ecosystems and global resource flows is the most
+                useful thing I have read for autonomy engineering. Why
+                Meadows&#39;s leverage points matter more for AV development
+                than additional simulation miles ever will.
+              </p>
+            </div>
+          </li>
+          <li>
             <time dateTime="2026-05">May 2026</time>
             <div>
               <Link href="/writing/satellites-to-autonomy">
@@ -88,8 +128,8 @@ export default function HomePage() {
                 autonomous vehicles
               </Link>
               <p className="dek">
-                Two domains that look nothing alike on the surface, and the
-                MBSE discipline that translates between them.
+                Two domains that look nothing alike on the surface, and the MBSE
+                discipline that translates between them.
               </p>
             </div>
           </li>

@@ -100,11 +100,11 @@ will skip page generation if the file already exists.
 - `content/articles/<slug>.md`: the source of truth
 - Optionally: a custom `app/writing/<slug>/page.tsx` if you want rich formatting
 
-**You update manually after each release** (because it's nice to have):
-- `app/page.tsx` and `app/writing/page.tsx`: the listing pages
-- `app/sitemap.ts`: the sitemap
+**Auto-updated by the scheduler** (same commit as the article page):
+- `app/page.tsx` and `app/writing/page.tsx`: writing lists rebuilt from `content/published.json`
+- `app/sitemap.ts`: includes every site-published article URL
 
-(These could also be automated later; for now they're manual because they affect site layout.)
+**Vercel:** A push to `main` from the publish workflow triggers a production deploy automatically. For an explicit deploy (and a clearer signal in the Vercel dashboard), add a **Deploy Hook** in the Vercel project (Settings → Git → Deploy Hooks → Production) and save the URL as the `VERCEL_DEPLOY_HOOK` GitHub secret. The workflow POSTs to it after each publish commit.
 
 ## Initial setup (one time)
 
@@ -140,17 +140,17 @@ Add the ones you have, leave the rest empty (the scheduler skips platforms with 
 
 The scheduler runs successfully even if only one platform is configured. Start with Dev.to (5-minute setup).
 
-### LinkedIn is intentionally manual
+### LinkedIn is intentionally manual (with automatic reminders)
 
 The `publish-linkedin.js` script exists and works, but it's not wired up to the cron by default. Reasons:
 
-1. **LinkedIn requires a Developer App tied to a Company Page** — even for personal posting via API. Free to create but adds maintenance surface.
-2. **OAuth tokens expire every 60 days** — requires either manual re-auth every ~50 days or refresh-token rotation (not currently implemented).
-3. **2x/month publishing cadence doesn't justify the API maintenance** — 30 seconds of manual copy-paste per article is cheaper than maintaining LinkedIn API tokens.
+1. **LinkedIn requires a Developer App tied to a Company Page** for personal posting via API. Free to create but adds maintenance surface.
+2. **OAuth tokens expire every 60 days**, requiring either manual re-auth every ~50 days or refresh-token rotation (not currently implemented).
+3. **2x/month publishing cadence doesn't justify the API maintenance.** 30 seconds of manual copy-paste per article is cheaper than maintaining LinkedIn API tokens.
 
-**Operational pattern**: when GitHub emails you that the cron published a new article, open LinkedIn, paste the canonical URL (e.g. `https://www.stephanclaxton.com/writing/<slug>`), use the `linkedinHook` field from the article's frontmatter as the post commentary, and share.
+**How you get reminded:** When the cron publishes a new article to the site, it automatically creates a GitHub Issue labeled `linkedin-reminder`. The issue contains the article title, canonical URL, and the full `linkedinHook` text from the frontmatter, ready to copy-paste. GitHub sends you an email notification for the new issue. Open LinkedIn, paste the hook and URL, and close the issue.
 
-If you ever want to flip this on, set `LINKEDIN_TOKEN` and `LINKEDIN_AUTHOR_URN` in GitHub Secrets — the script will start firing automatically. To get the credentials:
+If you ever want to flip on full automation, set `LINKEDIN_TOKEN` and `LINKEDIN_AUTHOR_URN` in GitHub Secrets. The script will start posting automatically and no reminder issues will be created. To get the credentials:
 
 - App + OAuth: https://www.linkedin.com/developers/apps → Create app → request "Share on LinkedIn" + "Sign In with LinkedIn using OpenID Connect" products → OAuth scopes: `openid profile email w_member_social` → manual token exchange via cURL
 - Author URN: `curl -H "Authorization: Bearer $TOKEN" https://api.linkedin.com/v2/userinfo` → format as `urn:li:person:<sub>`
@@ -198,6 +198,8 @@ Change the `publishAt` value and push. As long as `content/published.json` doesn
 
 **Actions → Scheduled publish → Run workflow → Force-publish a specific slug now: `my-article-slug`**
 
+This publishes the article immediately regardless of its `publishAt` date. Only the specified slug is processed; all other articles are ignored for that run.
+
 ### Re-publish an already-shipped article
 
 Edit `content/published.json` to remove the entry for that slug + platform, commit, and the next cron run will re-publish that platform. Useful if something failed silently.
@@ -206,11 +208,12 @@ Edit `content/published.json` to remove the entry for that slug + platform, comm
 
 The point of this design is you don't *need* to monitor it. But if you want to:
 
-- **Email on failure:** GitHub already emails you when an Actions workflow fails. That's all the monitoring you need.
+- **LinkedIn reminder issues:** When articles publish, the workflow creates a GitHub Issue with the LinkedIn hook text and URL. GitHub emails you about new issues, so this doubles as your "something published" notification.
+- **Email on failure:** GitHub already emails you when an Actions workflow fails.
 - **Per-run summary:** Each cron run writes a summary visible at Actions → Scheduled publish → \<run\> → Summary
 - **Audit trail:** `content/published.json` is the canonical record of what shipped when, committed to git
 
-If a platform's API fails for a given article, the workflow fails loudly (email), the state file stays unmodified for that platform, and the *next* hourly run will retry it. No manual intervention needed for transient failures.
+If a platform's API fails for a given article, the workflow fails loudly (email), the state file stays unmodified for that platform, and the *next* daily run will retry it. No manual intervention needed for transient failures.
 
 ## Why this beats Buildkite, Vercel cron, or external schedulers
 

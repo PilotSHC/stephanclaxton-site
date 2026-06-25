@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: write  # needs write to commit back published.json + generated site pages
+  issues: write    # needs write to create LinkedIn reminder issues
 
 concurrency:
   group: scheduled-publish
@@ -59,13 +60,61 @@ jobs:
         run: |
           git config user.name "stephanclaxton-bot"
           git config user.email "bot@stephanclaxton.com"
-          git add content/published.json app/writing/
+          git add content/published.json app/writing/ app/page.tsx app/sitemap.ts
           if git diff --staged --quiet; then
             echo "Nothing to commit."
             exit 0
           fi
           git commit -m "chore(publish): release ${{ steps.run.outputs.slugs }}"
           git push
+
+      - name: Trigger Vercel production deploy
+        if: steps.run.outputs.any_published == 'true'
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$VERCEL_DEPLOY_HOOK" ]; then
+            echo "VERCEL_DEPLOY_HOOK not set; relying on GitHub push webhook for Vercel."
+            exit 0
+          fi
+          curl -fsS -X POST "$VERCEL_DEPLOY_HOOK"
+          echo "Vercel deploy hook triggered."
+
+      - name: Create LinkedIn reminder issues
+        if: steps.run.outputs.linkedin_reminders == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create "linkedin-reminder" --description "Reminder to post article on LinkedIn" --color "0A66C2" 2>/dev/null || true
+          node -e "
+          const reminders = require('./content/linkedin-reminders.json');
+          for (const r of reminders) {
+            const body = [
+              'A new article just published to the site. Time to share it on LinkedIn.',
+              '',
+              '## ' + r.title,
+              '',
+              '**URL:** ' + r.url,
+              '',
+              '### LinkedIn post text',
+              '',
+              'Copy everything below the line into LinkedIn along with the URL above.',
+              '',
+              '---',
+              '',
+              r.linkedinHook || '(No linkedinHook in frontmatter. Write a short hook manually.)',
+            ].join('\n');
+            console.log(JSON.stringify({ title: 'LinkedIn: ' + r.title, body, slug: r.slug }));
+          }
+          " | while IFS= read -r line; do
+            title=$(echo "$line" | jq -r '.title')
+            body=$(echo "$line" | jq -r '.body')
+            gh issue create --title "$title" --body "$body" --label "linkedin-reminder"
+          done
+
+      - name: Clean up reminder file
+        if: steps.run.outputs.linkedin_reminders == 'true'
+        run: rm -f content/linkedin-reminders.json
 
       - name: Summary
         if: always()
@@ -74,3 +123,4 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- Any published: \`${{ steps.run.outputs.any_published }}\`" >> $GITHUB_STEP_SUMMARY
           echo "- Slugs: \`${{ steps.run.outputs.slugs }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- LinkedIn reminders: \`${{ steps.run.outputs.linkedin_reminders }}\`" >> $GITHUB_STEP_SUMMARY
