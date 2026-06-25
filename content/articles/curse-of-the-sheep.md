@@ -196,6 +196,10 @@ Once you learn to see systems, you stop looking for certainty.
 
 You start looking for understanding.
 
+## Acknowledgements
+
+My thanks to the many engineers, researchers, practitioners, and new friends I had the privilege of meeting at INCOSE IS 2026. In particular, thank you to the coffee roaster in Yokohama who unknowingly gave me the metaphor that tied the week together, to Saulius Pavalkis for a presentation that challenged my thinking, to Ray for the many conversations on engineering governance, and to the PhD student from the Netherlands whose humility reminded me that engineering has always advanced one refinement at a time.
+
 ---
 
 *Stephan Claxton is a Systems Engineer at Applied Intuition. He previously held senior systems engineering roles at Strategic Technology Consulting (an Arcfield company) and Lockheed Martin, where he worked on model-based systems engineering for space and defense programs.*

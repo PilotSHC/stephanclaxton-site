@@ -23,7 +23,14 @@ const articleSchema = {
 };
 
 export default function Article() {
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} /><article className="article"><div className="meta">Essay</div><h1>The curse of the sheep</h1><div className="byline">Stephan Claxton, Systems Engineer at Applied Intuition</div><p>There are always a handful of moments that survive a conference.</p>
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <article className="article">
+        <div className="meta">Essay</div>
+        <h1>The curse of the sheep</h1>
+        <div className="byline">Stephan Claxton, Systems Engineer at Applied Intuition</div>
+        <p>There are always a handful of moments that survive a conference.</p>
         <p>The presentations eventually blur together. The slides become difficult to distinguish. Even the conversations that seemed profound at the time slowly fade into pages of notes and photographs that rarely get opened again.</p>
         <p>But every now and then, something completely unexpected becomes the part you remember.</p>
         <p>When I think back on INCOSE IS 2026 in Yokohama, it is not a keynote or a presentation that comes to mind first.</p>
@@ -115,6 +122,11 @@ export default function Article() {
         <p>That is the Curse of the Sheep.</p>
         <p>Once you learn to see systems, you stop looking for certainty.</p>
         <p>You start looking for understanding.</p>
+        <h2>Acknowledgements</h2>
+        <p>My thanks to the many engineers, researchers, practitioners, and new friends I had the privilege of meeting at INCOSE IS 2026. In particular, thank you to the coffee roaster in Yokohama who unknowingly gave me the metaphor that tied the week together, to Saulius Pavalkis for a presentation that challenged my thinking, to Ray for the many conversations on engineering governance, and to the PhD student from the Netherlands whose humility reminded me that engineering has always advanced one refinement at a time.</p>
         <hr />
-        <p className="endnote">Stephan Claxton is a Systems Engineer at Applied Intuition. He previously held senior systems engineering roles at Strategic Technology Consulting (an Arcfield company) and Lockheed Martin, where he worked on model-based systems engineering for space and defense programs.</p></article></>);
+        <p className="endnote">Stephan Claxton is a Systems Engineer at Applied Intuition. He previously held senior systems engineering roles at Strategic Technology Consulting (an Arcfield company) and Lockheed Martin, where he worked on model-based systems engineering for space and defense programs.</p>
+      </article>
+    </>
+  );
 }
