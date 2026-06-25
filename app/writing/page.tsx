@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function WritingIndex() {
   return (
-    <article className="article" style={{ maxWidth: "48rem" }}>
+    <article className="article">
       <div className="meta">Writing</div>
       <h1>
         Systems thinking, applied to engineering in the age of AI and autonomy
@@ -20,11 +20,27 @@ export default function WritingIndex() {
         <li>
           <time dateTime="2026-06">June 2026</time>
           <div>
-            <Link href="/writing/requirements-traceability-survival-skill">
-              Requirements traceability is a survival skill, not a compliance checkbox
+            <Link href="/writing/curse-of-the-sheep">
+              The curse of the sheep
             </Link>
             <p className="dek">
-              What aerospace gets right about traceability, what autonomous vehicle development is still figuring out, and why the answer changes depending on who is asking the question.
+              Reflections on context, mastery, and systems engineering from
+              INCOSE IS 2026, and why the discipline exists to preserve
+              understanding across time.
+            </p>
+          </div>
+        </li>
+        <li>
+          <time dateTime="2026-06">June 2026</time>
+          <div>
+            <Link href="/writing/requirements-traceability-survival-skill">
+              Requirements traceability is a survival skill, not a compliance
+              checkbox
+            </Link>
+            <p className="dek">
+              What aerospace gets right about traceability, what autonomous
+              vehicle development is still figuring out, and why the answer
+              changes depending on who is asking the question.
             </p>
           </div>
         </li>
@@ -35,7 +51,8 @@ export default function WritingIndex() {
               Your system model belongs in CI, not your document repository
             </Link>
             <p className="dek">
-              SysML v2 helps, but the harder shift is how systems engineers work when AI handles the typing and git owns the truth.
+              SysML v2 helps, but the harder shift is how systems engineers work
+              when AI handles the typing and git owns the truth.
             </p>
           </div>
         </li>
@@ -46,7 +63,10 @@ export default function WritingIndex() {
               Reading Donella Meadows from inside an autonomy company
             </Link>
             <p className="dek">
-              A book about ecosystems and global resource flows is the most useful thing I have read for autonomy engineering. Why Meadows&#39;s leverage points matter more for AV development than additional simulation miles ever will.
+              A book about ecosystems and global resource flows is the most
+              useful thing I have read for autonomy engineering. Why
+              Meadows&#39;s leverage points matter more for AV development than
+              additional simulation miles ever will.
             </p>
           </div>
         </li>
@@ -54,10 +74,12 @@ export default function WritingIndex() {
           <time dateTime="2026-05">May 2026</time>
           <div>
             <Link href="/writing/satellites-to-autonomy">
-              What satellite systems engineering taught me about building autonomous vehicles
+              What satellite systems engineering taught me about building
+              autonomous vehicles
             </Link>
             <p className="dek">
-              Two domains that look nothing alike on the surface, and the MBSE discipline that translates between them.
+              Two domains that look nothing alike on the surface, and the MBSE
+              discipline that translates between them.
             </p>
           </div>
         </li>
