@@ -8,6 +8,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/about`, lastModified: now, priority: 0.9 },
     { url: `${base}/writing`, lastModified: now, priority: 0.9 },
     {
+      url: `${base}/writing/mbse-at-startup-cadence`,
+      lastModified: now,
+      priority: 0.8,
+    },
+    {
       url: `${base}/writing/curse-of-the-sheep`,
       lastModified: now,
       priority: 0.8,
