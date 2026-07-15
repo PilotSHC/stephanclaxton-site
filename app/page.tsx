@@ -70,6 +70,17 @@ export default function HomePage() {
           <li>
             <time dateTime="2026-07">July 2026</time>
             <div>
+              <Link href="/writing/executable-models-verification">
+                Executable models close the verification gap that descriptive models never could
+              </Link>
+              <p className="dek">
+                A system model that can drive simulation is a different category of artifact than a system model that can only be reviewed.
+              </p>
+            </div>
+          </li>
+          <li>
+            <time dateTime="2026-07">July 2026</time>
+            <div>
               <Link href="/writing/mbse-at-startup-cadence">
                 Doing systems engineering at startup cadence
               </Link>
