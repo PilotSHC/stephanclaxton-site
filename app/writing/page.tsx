@@ -18,6 +18,17 @@ export default function WritingIndex() {
 
       <ul className="writing-list" style={{ marginTop: "2rem" }}>
         <li>
+          <time dateTime="2026-08">August 2026</time>
+          <div>
+            <Link href="/writing/configuration-aware-context">
+              AI doesn&apos;t know which system you&apos;re talking about
+            </Link>
+            <p className="dek">
+              AI engineering tools answer questions without knowing which system they are advising. That is a context problem, not a hallucination problem.
+            </p>
+          </div>
+        </li>
+        <li>
           <time dateTime="2026-07">July 2026</time>
           <div>
             <Link href="/writing/executable-models-verification">
