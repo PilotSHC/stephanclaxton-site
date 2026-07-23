@@ -18,6 +18,17 @@ export default function WritingIndex() {
 
       <ul className="writing-list" style={{ marginTop: "2rem" }}>
         <li>
+          <time dateTime="2026-08">August 2026</time>
+          <div>
+            <Link href="/writing/configuration-aware-context">
+              Configuration-aware context is what most AI engineering tools are missing
+            </Link>
+            <p className="dek">
+              AI tools answer engineering questions without knowing which version of your system they&apos;re advising about. That omission is structural, not cosmetic.
+            </p>
+          </div>
+        </li>
+        <li>
           <time dateTime="2026-07">July 2026</time>
           <div>
             <Link href="/writing/executable-models-verification">
