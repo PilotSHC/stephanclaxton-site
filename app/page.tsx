@@ -71,10 +71,10 @@ export default function HomePage() {
             <time dateTime="2026-08">August 2026</time>
             <div>
               <Link href="/writing/configuration-aware-context">
-                Configuration-aware context is what most AI engineering tools are missing
+                AI doesn&apos;t know which system you&apos;re talking about
               </Link>
               <p className="dek">
-                AI tools answer engineering questions without knowing which version of your system they&apos;re advising about. That omission is structural, not cosmetic.
+                AI engineering tools answer questions without knowing which system they are advising. That is a context problem, not a hallucination problem.
               </p>
             </div>
           </li>

@@ -1,80 +1,184 @@
 ---
-title: Configuration-aware context is what most AI engineering tools are missing
-description: AI tools answer engineering questions without knowing which version of your system they're advising about. That omission is structural, not cosmetic.
+title: AI doesn't know which system you're talking about
+description: AI engineering tools answer questions without knowing which system they are advising. That is a context problem, not a hallucination problem.
 slug: configuration-aware-context
 publishAt: 2026-08-26T09:00:00-07:00
 tags: [systems-engineering, ai-systems, mbse, autonomy, configuration-management]
 linkedinHook: |
-  Engineering decisions are configuration-relative. Whether a behavioral choice is correct depends on which software baseline you are running, which hardware is installed, what operational design domain you have committed to, and what constraints were already locked upstream.
+  Every engineering decision is made against a specific system configuration. The AI you're asking doesn't know what that configuration is.
 
-  Most AI tools in the engineering space do not model this. They carry general engineering knowledge but no artifact that anchors that knowledge to the specific state of a specific system at a specific point in design maturity.
+  It doesn't know your software baseline, your hardware variant, your ODD, or the design decisions already embedded throughout your architecture. It still answers.
 
-  The result is answers that are correct in the abstract but wrong for your program. The fix is structural, not conversational.
+  That isn't a hallucination problem. It's a context problem. And the fix is not a better prompt.
 ---
 
-Engineering decisions are configuration-relative. Whether a behavioral choice is correct depends on which software baseline you are running, which hardware configuration is installed, what operational design domain you have committed to, and what constraints were already established upstream in the design. Two systems that look the same on an architecture diagram can require completely different answers to the same engineering question.
+Every engineering decision is made against a specific system configuration.
 
-Most AI tools in the engineering space are not built to model this. They treat engineering knowledge as version-agnostic: general, abstract, applicable to any configuration of any system. Ask them about sensor fusion degradation handling and they will give you an answer that is correct in some configuration but does not know whether it is correct in yours. This is not a minor limitation. It is the structural reason that AI-generated engineering advice feels plausible but frequently requires engineers to translate it back to the actual system before it can be acted on.
+Whether a design choice is correct depends on the software baseline, hardware variant, interfaces, operational design domain (ODD), requirements baseline, accepted risks, and every design decision that came before it. Change any one of those, and the correct engineering answer can change with it.
 
-## What "configuration" means here
+This is where today's AI engineering tools break down.
 
-In systems engineering, configuration is not just a version number. It is the complete specified state of a system at a point in time: which requirements have been baselined, which design decisions have been locked, which interfaces are committed, which verification activities have been run and passed, which exceptions and waivers are in effect. Change any of those elements and you have a different configuration, and potentially different answers to the same engineering question.
+They answer engineering questions as if engineering knowledge is universal, as if there is one correct answer independent of the system being built. There rarely is.
 
-This is formalized in configuration management, a discipline older than modern software engineering. Programs have configuration control boards, interface control documents, and formal baselines not because of bureaucratic enthusiasm, but because engineering decisions compose. A decision made at the component level has to be consistent with the decision at the subsystem level, which has to be consistent with the system-level requirements, which have to be consistent with the operational scenario the system was designed for. The configuration is the frame that makes those consistency checks possible.
+Ask an AI assistant how to handle degraded localization. It will give you a technically sound answer. But it doesn't know whether your vehicle uses GNSS, wheel odometry, SLAM, RTK corrections, or infrastructure-assisted localization. It doesn't know your safety goals, your hardware revision, your ODD, or the assumptions already embedded throughout your architecture.
 
-AI tools, in their current default form, operate without that frame. They carry general engineering knowledge but no artifact that anchors that knowledge to the specific state of a specific system at a specific point in design maturity. The result is answers that are correct in the general case but may be wrong for your baseline.
+It will still answer.
 
-## Where this breaks in practice
+That isn't a hallucination problem.
 
-The failure mode is subtle at first. You ask an AI assistant about acceptable response latency for a planner component and get a technically reasonable answer. You do not notice that the answer assumes a sensor fusion architecture your program replaced two years ago. The advice is plausible. You act on it. The inconsistency surfaces in integration, or in testing, or later.
+It's a context problem.
 
-The problem compounds when engineers at different program stages consult the same tool without adjusting for their configuration. An engineer on a pre-baseline design phase gets the same answer as an engineer on a mature system with locked interfaces and accumulated waivers. The tool does not distinguish between these contexts because it has no artifact that carries them.
+## Configuration is more than a version number
 
-This is not a failure of AI capability. It is a failure of what context the AI tool actually receives. You cannot reason correctly about a configuration-dependent question if you have no representation of the configuration.
+When engineers talk about configuration, they aren't talking about software version 4.2.
 
-## What configuration-aware context actually looks like
+Configuration is the complete engineering state of a system at a point in time.
 
-The fix is structural, not conversational. Telling the AI "we're on software baseline 4.2" in a chat prompt moves the problem without solving it. The model has no way to know what baseline 4.2 specifies, which decisions it locks, or what constraints it implies unless that information exists in a form the model can reason against.
+It includes the requirements that have been baselined, the interfaces that have been approved, the hardware that's actually installed, the architecture decisions that have already been made, the verification evidence that exists, the known exceptions, waivers, and the constraints inherited from earlier design decisions.
 
-Configuration-aware context requires the AI tool to have access to the actual engineering artifacts that define the system state: the current requirements baseline, the current interface definitions, the verification status of relevant components, and the design decisions that are already closed. Not summaries. Not the engineer's description of these artifacts. The artifacts themselves, in a form the tool can parse and compare.
+Change any of those and you're no longer talking about the same system.
 
-This is one of the places where the argument for model-based systems engineering and the argument for useful AI tooling converge. A system model maintained in version control, at a specific commit, is an addressable statement of configuration. An AI tool that receives the model at that commit is operating with the same ground truth the engineering team is operating with. One that does not has to approximate it from context, which it will do imperfectly.
+You're solving a different engineering problem.
 
-## The autonomy case makes this concrete
+This is why configuration management exists.
 
-Autonomous vehicles are a useful lens because their configurations are genuinely complex. The software stack changes weekly. The sensor configuration changes by vehicle variant and test program. The operational design domain changes by geography and permit. The behavioral requirements change by release.
+Configuration Control Boards, interface baselines, change requests, and version-controlled models aren't bureaucracy. They're how engineering organizations ensure thousands of decisions remain consistent with one another over years of development.
 
-Ask an AI tool whether a particular response to sensor degradation is acceptable, without providing the current ODD definition, the current sensor baseline, and the current behavioral requirements for this variant, and you are asking a question the tool does not have enough context to answer correctly. It will answer anyway. The answer will sound informed.
+Every decision inherits context from previous decisions.
 
-Every engineering team working on high-consequence systems has experienced the particular frustration of getting AI-generated content that is locally coherent but inconsistent with some upstream decision the tool did not know about. The upstream decision was not in the chat history. The configuration was not in the context window. The tool reasoned forward from the general case and arrived somewhere plausible but wrong.
+## Where AI falls apart
 
-## The deeper structural issue
+Current AI tools don't operate against that engineering context.
 
-There is a useful way to frame what is happening here. General engineering knowledge, which is what most AI tools carry, is knowledge about how systems tend to work. Configuration-specific engineering reasoning is knowledge about how this system works, at this state, given these constraints. The gap between those two is exactly the gap that systems engineers fill when they contextualize general knowledge for a specific program.
+They operate against general engineering knowledge.
 
-That gap is not filled by the engineer being smart. It is filled by the engineer having access to the program's configuration artifacts and knowing how to read them. When an AI tool displaces that engineer in generating advice but does not have access to those artifacts, it takes over the answer-generation function while losing the context-loading function. The answers come faster and read better. The systematic error embedded in those answers is harder to see.
+That works surprisingly well. Until it doesn't.
 
-This is a stock-and-flow problem in configuration knowledge. The engineering team's ability to make correct configuration-specific decisions depends on a stock of configuration context that gets built up and maintained through continuous documentation, baselining, and review. AI tools that operate outside that stock do not draw it down, but they also do not contribute to it, and the advice they give can lead engineers away from it. The configuration baseline exists; the tool just cannot see it.
+Imagine asking whether a planner's response latency is acceptable.
 
-## What has to change
+The answer might be perfectly reasonable for one architecture while being completely wrong for yours because your perception pipeline, hardware, or safety allocation changed six months ago.
 
-Three things need to move for this to improve.
+Nothing in the response tells you that.
 
-First, AI tools for engineering need to treat configuration context as a first-class input, not a prompt hint. A structured artifact can be checked for consistency, queried for specific properties, and compared against other structured artifacts. A prompt hint can only be believed.
+The advice sounds correct.
 
-Second, the system model has to be the carrier of that context. The argument for putting system models in version control (so they are current and trustworthy) and the argument for configuration-aware AI tooling are the same argument approached from two directions. A system model in CI, at a specific commit, gives every configuration an addressable state. An AI tool that knows which commit it is advising against is in a fundamentally different position than one advising against the air.
+The failure doesn't show up until integration, testing, or certification.
 
-Third, engineers need the judgment to recognize when a tool's response cannot be correct because the tool lacks the context to make it correct. That judgment is not a prompt technique. It is the product of understanding what configuration the system is in and what the tool's context window actually contains.
+That's the dangerous part.
 
-## Why this matters now
+The problem isn't that AI produces bad engineering advice.
 
-AI tooling in engineering is at a stage where capability is outpacing integration. The tools are impressive. The gap between what they can do in a general sense and what they can do correctly for a specific program is real and mostly invisible to people who have not worked deep inside a configuration-managed program.
+The problem is that it produces advice without knowing which system it's advising.
 
-The engineers who handle this well are the ones who treat AI tool output the way they treat any other engineering input: check the source, check the version, check whether the advice is appropriate for the current configuration. The engineers who handle it poorly treat plausible output as correct output, and discover the difference when something breaks.
+## Context isn't something you type into a prompt
 
-The discipline that catches this is not new. Configuration management has always been the practice of keeping answers anchored to specific system states. The novelty is that AI tools have made it easier to get answers without that anchor, and the answers are now harder to distinguish from correct ones.
+Most people try to solve this by giving the model more information.
 
-Generic advice for configuration-dependent decisions is not wrong in principle. It is wrong in application. In engineering, application is where the stakes are.
+"We're running software baseline 4.2."
+
+"We're using Platform B."
+
+"This is Release 17."
+
+That helps, but it doesn't solve the problem.
+
+Those are labels.
+
+The model still doesn't know what baseline 4.2 actually contains.
+
+Real engineering context isn't a paragraph.
+
+It's the collection of engineering artifacts that define the system.
+
+Requirements.
+
+Architecture.
+
+Interfaces.
+
+Verification evidence.
+
+Hazard analyses.
+
+Traceability.
+
+Configuration history.
+
+The AI shouldn't be reasoning from a summary of those artifacts.
+
+It should be reasoning from the artifacts themselves.
+
+## Why version-controlled system models matter
+
+This is why the system model is the most practical foundation for configuration-aware AI.
+
+A version-controlled model represents the engineering configuration at a specific point in time.
+
+A commit isn't just source code.
+
+It's an addressable snapshot of engineering intent.
+
+If an AI reasons over the model at commit X, it shares the same ground truth as the engineering team reviewing commit X.
+
+Now engineering discussions become reproducible.
+
+If the configuration changes, the reasoning changes.
+
+If the model changes, the recommendations change.
+
+That's how engineering actually works.
+
+## Autonomous systems make this obvious
+
+Autonomous vehicles expose the problem faster than almost any other industry.
+
+The software stack evolves weekly.
+
+Vehicle variants use different hardware.
+
+Behavior changes across releases.
+
+The ODD changes by geography.
+
+Safety assumptions change as evidence accumulates.
+
+Ask whether a degraded sensor response is acceptable without knowing the current vehicle variant, current behavioral requirements, and current ODD, and the AI literally cannot determine the correct answer.
+
+It will still give one.
+
+That's the structural flaw.
+
+## The real divide
+
+General engineering knowledge explains how systems typically work.
+
+Engineering practice determines how this system works, in this configuration, under these constraints.
+
+Systems engineers spend their careers bridging that gap.
+
+Today's AI largely ignores it.
+
+That's why AI-generated engineering advice often feels intelligent while still requiring experienced engineers to reinterpret it before acting.
+
+The missing piece isn't a larger model.
+
+It's configuration-aware context.
+
+## What needs to change
+
+Engineering AI needs to stop treating configuration as something hidden in a prompt.
+
+Configuration should be a first-class input.
+
+That input should come directly from version-controlled engineering artifacts.
+
+And engineers need tools that can reason against the same configuration the program is actually building, not some generic representation of what similar systems usually look like.
+
+Generic engineering advice isn't inherently wrong.
+
+It's simply disconnected from the system it's trying to improve.
+
+In engineering, that distinction is everything.
 
 ---
 
