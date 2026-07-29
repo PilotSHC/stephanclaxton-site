@@ -68,13 +68,13 @@ export default function HomePage() {
         <h2>Writing</h2>
         <ul className="writing-list">
           <li>
-            <time dateTime="2026-08">August 2026</time>
+            <time dateTime="2026-07">July 2026</time>
             <div>
-              <Link href="/writing/configuration-aware-context">
-                AI doesn&apos;t know which system you&apos;re talking about
+              <Link href="/writing/av-verification-vs-spacecraft">
+                Why autonomous vehicles have a harder verification problem than spacecraft
               </Link>
               <p className="dek">
-                AI engineering tools answer questions without knowing which system they are advising. That is a context problem, not a hallucination problem.
+                A satellite operates in a bounded environment. An autonomous vehicle operates in an open-ended one. The difference reshapes everything about how you build confidence in the system.
               </p>
             </div>
           </li>
@@ -141,6 +141,17 @@ export default function HomePage() {
               </Link>
               <p className="dek">
                 A book about ecosystems and global resource flows is the most useful thing I have read for autonomy engineering. Why Meadows&#39;s leverage points matter more for AV development than additional simulation miles ever will.
+              </p>
+            </div>
+          </li>
+          <li>
+            <time dateTime="2026-05">May 2026</time>
+            <div>
+              <Link href="/writing/satellites-to-autonomy">
+                What satellite systems engineering taught me about building autonomous vehicles
+              </Link>
+              <p className="dek">
+                Two domains that look nothing alike on the surface, and the MBSE discipline that translates between them.
               </p>
             </div>
           </li>
