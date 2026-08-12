@@ -18,6 +18,17 @@ export default function WritingIndex() {
 
       <ul className="writing-list" style={{ marginTop: "2rem" }}>
         <li>
+          <time dateTime="2026-08">August 2026</time>
+          <div>
+            <Link href="/writing/advice-for-systems-engineers">
+              What I would tell a systems engineer five years into their career
+            </Link>
+            <p className="dek">
+              The career advice nobody gave me, written for the engineer I was at 28 and now sometimes see across the table.
+            </p>
+          </div>
+        </li>
+        <li>
           <time dateTime="2026-07">July 2026</time>
           <div>
             <Link href="/writing/av-verification-vs-spacecraft">
