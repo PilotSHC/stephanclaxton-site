@@ -14,7 +14,7 @@ linkedinHook: |
 
 Most system models have an output path and no return path.
 
-Requirements flow toward verification. Architecture informs test design. Behavioral models generate scenarios or expected results. Then the evidence lands somewhere else: a test dashboard, a simulation database, a certification report, or a folder full of logs.
+Requirements flow toward verification. Architecture informs test design. Behavioral models generate scenarios or expected results. Then the evidence lands somewhere else: a test dashboard, a simulation database, a fleet event store, or a folder full of logs.
 
 The model continues to show what the system should do. It does not know what the engineering organization has established that the system actually does.
 
@@ -74,17 +74,21 @@ The model does not have to execute every activity itself. It has to know why eac
 
 This keeps automation honest. Running a million simulation miles is not useful if the changed behavior appears in none of them. A smaller scenario set selected from explicit model dependencies may provide stronger evidence because the team can explain what it covered and why.
 
-## Failed evidence should change engineering work
+## Fleet events should change the model
 
-The return path matters most when evidence is negative.
+The return path cannot stop at pre-release testing. Operation produces evidence that no laboratory can manufacture.
 
-In many organizations, a failed system test creates a defect in a separate tracking system. The defect is assigned to a component team. The model remains untouched unless the investigation eventually concludes that the architecture or requirement was wrong.
+Autonomous vehicles encounter combinations of behavior, environment, and human response that were absent from the original scenario library. A disengagement may reveal a planner defect. It may expose an interface that does not carry enough confidence information, an impossible timing allocation, or a requirement that left fallback behavior undefined.
 
-That sequence assumes failure belongs to implementation until proven otherwise. Complex systems do not respect that assumption.
+In many organizations, the event creates a defect in a separate tracking system. The defect is assigned to the nearest component team. A postmortem records what happened. The model remains untouched unless someone later decides that the architecture was involved.
 
-A failed degraded-localization scenario may expose a planner defect. It may also reveal an interface that does not carry enough confidence information, an impossible timing allocation, or a requirement that left fallback behavior undefined. The evidence should reopen the connected claims and place the affected model elements inside the investigation boundary.
+That is another broken information path.
 
-This does not mean every failed test triggers an architecture rewrite. It means the workflow preserves the possibility that the model is part of what failed.
+An operational event should carry the release identifier and model commit for the system involved. The event taxonomy should map observations to modeled behaviors, ODD constraints, and scenario families. When observed behavior falls outside the modeled set, the workflow should open the gap explicitly: add a scenario, revise an assumption, narrow an operating constraint, or change the design.
+
+The resulting scenario then joins the regression suite for later releases. Its evidence flows back to the claims that the event challenged. The field observation is no longer a postmortem footnote. It becomes a durable part of how the organization defines and verifies the system.
+
+This does not mean every event triggers an architecture rewrite. It means the workflow preserves the possibility that the model is part of what failed.
 
 That changes root-cause behavior. Teams are less likely to patch the nearest component when the evidence map shows that several implementations satisfy their local contracts while the system-level claim still fails. The structure points the investigation toward the missing relationship or incorrect allocation.
 
