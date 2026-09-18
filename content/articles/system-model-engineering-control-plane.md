@@ -2,7 +2,7 @@
 title: The system model should become the engineering control plane
 description: The next MBSE platform will coordinate decisions, policies, configurations, and evidence without trying to contain every engineering artifact.
 slug: system-model-engineering-control-plane
-publishAt: 2026-09-30T09:00:00-07:00
+publishAt: 2026-10-16T09:00:00-07:00
 tags: [systems-engineering, mbse, ai-systems, executable-models, engineering-leadership]
 linkedinHook: |
   The system model should not become another warehouse for every engineering artifact.

@@ -2,7 +2,7 @@
 title: MBSE needs a product strategy, not a modeling rollout
 description: MBSE transformations succeed when leaders treat the engineering workflow as a product with users, outcomes, adoption constraints, and a focused path to value.
 slug: mbse-needs-product-strategy
-publishAt: 2026-09-16T09:00:00-07:00
+publishAt: 2026-10-02T09:00:00-07:00
 tags: [systems-engineering, mbse, engineering-leadership, engineering-culture]
 linkedinHook: |
   Most MBSE transformations are managed as tool deployments. Buy the platform, train the modelers, define the ontology, and tell every program to adopt it.

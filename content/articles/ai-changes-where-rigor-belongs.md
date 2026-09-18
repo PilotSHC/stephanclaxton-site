@@ -2,23 +2,27 @@
 title: AI changes where engineering rigor belongs
 description: When AI compresses the development cycle, quality depends on moving rigor into architecture, evidence, and the change path itself.
 slug: ai-changes-where-rigor-belongs
-publishAt: 2026-10-28T09:00:00-07:00
+publishAt: 2026-09-18T09:00:00-07:00
 tags: [systems-engineering, ai-systems, engineering-leadership, verification, autonomy]
 linkedinHook: |
-  AI is collapsing the time between an idea and an implementation. It is not collapsing the distance between an implementation and justified confidence in it.
+  When I was learning to ski, my instructor told me, “Speed hides mistakes.”
 
-  That creates a new engineering bottleneck. Teams can generate more changes than their existing review and verification systems can understand.
+  AI can do the same thing to engineering. It collapses the time between an idea and an implementation, but it does not collapse the distance between an implementation and justified confidence in it.
 
-  Maintaining quality at AI speed requires moving rigor out of milestone gates and into architecture, automated evidence, and the path every change takes to production.
+  Maintaining quality at AI speed requires changing where rigor lives.
 ---
 
-AI is collapsing the time between an idea and an implementation.
+When I was learning to ski, my instructor gave me a line I still think about:
 
-It is not collapsing the distance between an implementation and justified confidence in it.
+“Speed hides mistakes.”
 
-Consider an agent-generated change that touches behavior logic, tests, and documentation in one afternoon. Passing local checks can establish that the patch is internally consistent. It cannot establish that every affected product configuration still satisfies the claims required for release.
+At low speed, bad technique is obvious. You feel the hesitation, the poor balance, the turn that never quite closes. Add speed and some of those problems appear to disappear. Momentum carries you through. The run feels smoother, right up to the moment the terrain changes and the mistake you never corrected matters all at once.
 
-That system-level proof does not get easier because the code arrived faster.
+The lesson was not to avoid speed. It was to develop technique that still worked when I accelerated.
+
+AI creates the same problem for engineering organizations. It collapses the time between an idea and an implementation. It does not collapse the distance between an implementation and justified confidence in it.
+
+Consider an agent-generated change that touches behavior logic, tests, and documentation in one afternoon. Passing local checks can establish that the patch is internally consistent. It cannot establish that every affected product configuration still satisfies the claims required for release. That system-level proof does not get easier because the code arrived faster.
 
 The engineering challenge of the AI era is preserving quality when the rate of change exceeds the old lifecycle’s capacity to understand it. Slowing every change back down would surrender the value AI creates. Rigor has to move into the structure through which changes travel.
 
@@ -37,6 +41,20 @@ The bottleneck moves.
 If the organization keeps the old lifecycle, work accumulates in review and verification. Leaders see growing queues and ask reviewers to move faster. Teams respond by sampling more lightly, narrowing review scope, or treating passing component tests as sufficient evidence. Delivery metrics improve until integration or operation exposes what the lifecycle stopped seeing.
 
 The failure is structural. The system is sending a higher volume of change through controls built for a lower one.
+
+## Susan is carrying two lifecycles
+
+A systems engineer I will call Susan is working through this transition now.
+
+She learned to express rigor through complete artifacts, formal reviews, and enough detail that another engineer could reconstruct the reasoning later. Software development asks her to work through small diffs, continuous integration, and decisions that may be revised before a traditional review package is finished.
+
+Both instincts are rational. Together they create an impossible job.
+
+If Susan preserves the old level of detail in the old format, the implementation moves ahead while she documents it. If she matches software speed by dropping the detail, the organization loses the system-level reasoning it hired her to provide. Telling her to “be more agile” does not resolve the conflict. Neither does asking the software team to wait for a document lifecycle calibrated for a different era.
+
+The workflow has to preserve the reasoning at a smaller unit of change. The requirement, interface decision, affected configurations, and evidence obligation need to move with the implementation instead of arriving in a package later.
+
+Susan’s struggle is not resistance to software. It is evidence that the organization accelerated implementation before redesigning how rigor reaches it.
 
 ## Slow is not the same as rigorous
 

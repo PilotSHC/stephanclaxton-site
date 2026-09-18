@@ -2,7 +2,7 @@
 title: The next engineering platform closes the loop from fleet to architecture
 description: High-consequence products improve faster when field evidence changes scenarios, system assumptions, and architecture through one managed learning loop.
 slug: fleet-to-architecture-learning-loop
-publishAt: 2026-10-14T09:00:00-07:00
+publishAt: 2026-10-30T09:00:00-07:00
 tags: [systems-engineering, autonomy, mbse, verification, engineering-leadership]
 linkedinHook: |
   Deployed autonomous systems generate evidence every day. Most of that evidence reaches dashboards, defect trackers, and postmortems without changing the system model that defines what the product is supposed to do.
