@@ -68,6 +68,17 @@ export default function HomePage() {
         <h2>Writing</h2>
         <ul className="writing-list">
           <li>
+            <time dateTime="2026-09">September 2026</time>
+            <div>
+              <Link href="/writing/design-intent-at-ai-speed">
+                Design intent has to move at AI speed
+              </Link>
+              <p className="dek">
+                AI accelerates implementation. Product leaders must make intent explicit, versioned, and executable at the same cadence as design and code.
+              </p>
+            </div>
+          </li>
+          <li>
             <time dateTime="2026-08">August 2026</time>
             <div>
               <Link href="/writing/advice-for-systems-engineers">
