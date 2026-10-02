@@ -68,6 +68,17 @@ export default function HomePage() {
         <h2>Writing</h2>
         <ul className="writing-list">
           <li>
+            <time dateTime="2026-10">October 2026</time>
+            <div>
+              <Link href="/writing/mbse-needs-product-strategy">
+                MBSE needs a product strategy, not a modeling rollout
+              </Link>
+              <p className="dek">
+                MBSE transformations succeed when leaders treat the engineering workflow as a product with users, outcomes, adoption constraints, and a focused path to value.
+              </p>
+            </div>
+          </li>
+          <li>
             <time dateTime="2026-09">September 2026</time>
             <div>
               <Link href="/writing/design-intent-at-ai-speed">
