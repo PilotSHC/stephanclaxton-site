@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Stephan Claxton: Systems Engineering for AI & Autonomy",
     description:
       "Architecture, MBSE, and executable models for AI and autonomy at Applied Intuition.",
