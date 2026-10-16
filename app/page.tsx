@@ -70,6 +70,17 @@ export default function HomePage() {
           <li>
             <time dateTime="2026-10">October 2026</time>
             <div>
+              <Link href="/writing/system-model-engineering-control-plane">
+                The system model should become the engineering control plane
+              </Link>
+              <p className="dek">
+                The next MBSE platform will coordinate decisions, policies, configurations, and evidence without trying to contain every engineering artifact.
+              </p>
+            </div>
+          </li>
+          <li>
+            <time dateTime="2026-10">October 2026</time>
+            <div>
               <Link href="/writing/mbse-needs-product-strategy">
                 MBSE needs a product strategy, not a modeling rollout
               </Link>
