@@ -20,6 +20,17 @@ export default function WritingIndex() {
         <li>
           <time dateTime="2026-10">October 2026</time>
           <div>
+            <Link href="/writing/fleet-to-architecture-learning-loop">
+              The next engineering platform closes the loop from fleet to architecture
+            </Link>
+            <p className="dek">
+              High-consequence products improve faster when field evidence changes scenarios, system assumptions, and architecture through one managed learning loop.
+            </p>
+          </div>
+        </li>
+        <li>
+          <time dateTime="2026-10">October 2026</time>
+          <div>
             <Link href="/writing/system-model-engineering-control-plane">
               The system model should become the engineering control plane
             </Link>
