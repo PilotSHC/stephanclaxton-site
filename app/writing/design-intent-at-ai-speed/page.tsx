@@ -3,12 +3,23 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Design intent has to move at AI speed",
   description: "AI accelerates implementation. Product leaders must make intent explicit, versioned, and executable at the same cadence as design and code.",
+  alternates: {
+    canonical: "/writing/design-intent-at-ai-speed",
+  },
   openGraph: {
     title: "Design intent has to move at AI speed",
     description: "AI accelerates implementation. Product leaders must make intent explicit, versioned, and executable at the same cadence as design and code.",
     type: "article",
+    url: "/writing/design-intent-at-ai-speed",
+    siteName: "Stephan Claxton",
+    locale: "en_US",
     publishedTime: "2026-09-18T09:00:00-07:00",
     authors: ["Stephan Claxton"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Design intent has to move at AI speed",
+    description: "AI accelerates implementation. Product leaders must make intent explicit, versioned, and executable at the same cadence as design and code.",
   },
 };
 
